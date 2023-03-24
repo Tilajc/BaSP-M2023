@@ -1,3 +1,3 @@
 # BaSP-m2023
 
-landing page HTML
+It's going to be a landing page for the gym "Mega Rocket"
