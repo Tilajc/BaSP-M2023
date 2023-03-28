@@ -10,6 +10,10 @@ During the first week I have been working with figma. I worked in the admin sect
 
 During the second week I have been working with HTML, Git, and Github. I adapted the landing page to HTML, and then Uploaded the HTML on Github using Git.
 
+## Week-03
+
+Placeholder (doing a BaSP-W02-2023 commit)
+
 ## Run Locally
 
 Clone the project
