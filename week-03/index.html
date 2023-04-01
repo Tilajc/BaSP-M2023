@@ -16,45 +16,65 @@
         </header>
         <aside>
             <nav>
-                <input type="search" placeholder="search">
+                <div class="search-container">
+                    <input class="search" type="search" placeholder="search">
+                    <img class="searcher" src="../assets/img/searcher.png" alt="magnifying glass">
+                </div>
+                <div class="button-div">
                 <img class="icon1" src="../assets/img/house.png" alt="House">
-                <button>
-                    Home
-                </button>
+                    <button class="nav-button">
+                        Home
+                    </button>
+                </div>
+                <div class="button-div">
                 <img class="icon1" src="../assets/img/plus.png" alt="Plus">
-                <button>
-                    Sing Up
-                </button>
-                <img class="icon3" src="../assets/img/people.png" alt="Sign in">
-                <button>
-                    Sign in
-                </button>
+                    <button class="nav-button">
+                        Sing Up
+                    </button>
+                </div>
+                <div class="button-div">
+                    <img class="icon3" src="../assets/img/people.png" alt="Sign in">
+                    <button class="nav-button">
+                        Sign in
+                    </button>
+                </div>
+                <div class="button-div">
                 <img class="icon1" src="../assets/img/files.png" alt="Contact">
-                <button>
-                    Contact
-                </button>
+                    <button class="nav-button">
+                        Contact
+                    </button>
+                </div>
             </nav>
-            <p>
+            <p class="information">
                 Information
             </p>
+            <div class="information-div-container">
             <img class="icon2" src="../assets/img/email.png" alt="Email">
-            <p>
-                information@untitled.tld
-            </p>
+                <div class="information-div-p-container">
+                    <p>
+                        information@untitled.tld
+                    </p>
+                </div>
+            </div>
+            <div class="information-div-container">
             <img class="icon2" src="../assets/img/phone.png" alt="Phone">
-            <p>
-                (000) 000-0000
-            </p>
-            <img class="icon2" src="../assets/img/house.png" alt="Address">
-            <p>
-                1234 Somewhere Road
-            </p>
-            <p>
-                #8254Nashville, TN
-            </p>
-            <p>
-                00000-0000
-            </p>
+                <p>
+                    (000) 000-0000
+                </p>
+            </div>
+            <div class="information-div-container">
+                <img class="icon2" src="../assets/img/house.png" alt="Address">
+                
+                <p>
+                    1234 Somewhere Road
+                </p>
+                <p id="adress-p">
+                    #8254Nashville, TN
+                </p>
+                <p>
+                    00000-0000
+                </p>
+            </div>
         </aside>
         <main>
             <section>
@@ -91,9 +111,9 @@
                 </p>
             </section>
             <section>
-                <h3>
+                <h2>
                     Registration and/or claim
-                </h3>
+                </h2>
                 <form>
                     <label for="name">
                         Name
@@ -140,9 +160,9 @@
                     </p>
             </section>
             <section>
-                <h3>
+                <h2>
                     Activities
-                </h3>
+                </h2>
                 <img src="../assets/img/crossfit.png" alt="Crossfit">
                 <p>
                     Crossfit
@@ -165,9 +185,9 @@
                 </p>
             </section>
             <section>
-                <h4>
+                <h3>
                     Membership Black
-                </h4>
+                </h3>
                 <ul>
                     <li>
                         Free access to Bodybuilding
@@ -182,9 +202,9 @@
                         Grid display
                     </li>
                 </ul>
-                <h4>
+                <h3>
                     Membership Classic
-                </h4>
+                </h3>
                 <ul>
                     <li>
                         Free acces to the weight room
@@ -196,9 +216,9 @@
                         Grid display
                     </li>
                 </ul>
-                <h4>
+                <h3>
                     Membership Only Classes
-                </h4>
+                </h3>
                 <ul>
                     <li>
                         Personalized monitoring by a coach

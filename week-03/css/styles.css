@@ -21,19 +21,22 @@ header p{
 aside{
     position: fixed;
     background-color: #f6f6f6;
-    float: left;
     width: 335px;
     height: 100%;
     top: 117.92px;
 }
 
-ul{
-    list-style: none;
+nav{
+    text-align: center;
 }
 
 main{
     margin-left: 335px;
     margin-top: 117.92px;
+}
+
+ul{
+    list-style: none;
 }
 
 footer{
@@ -46,20 +49,81 @@ footer{
     right: 20px;
 }
 
-
+#adress-p{
+    display: block;
+}
 
 .icon1{
     width: 44px;
     height: 39px;
+    margin-bottom: -16px;
+    margin-right: 30px;
 }
-
 
 .icon2{
     width: 33px;
     height: 33px;
+    margin-bottom: -12px;
+    margin-right: 30px;
 }
 
 .icon3{
     width: 44px;
     height: 29px;
+    margin-bottom: -10px;
+    margin-right: 30px;
+}
+
+.search-container{
+    position: relative;
+    margin-top: 16px;
+}
+
+.search{
+    width: 255px;
+    height: 36px;
+    border-radius: 4;
+}
+
+.searcher{
+    position: absolute;
+    right: 40px;
+    top: 5px;
+}
+
+.nav-button{
+    width: 238px;
+    height: 49px;
+    background-color: #aace9b;
+    border-radius: 10px;
+    border: none;
+}
+
+.nav-button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.button-div{
+    margin-top: 30px;
+}
+
+.information{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 139px;
+    font-weight: bold;
+}
+
+.information-div{
+    position: relative;
+    width: 250px;
+    text-align: center;
+}
+
+.information-div img{
+    margin-left: 0;
+}
+
+.information-div-p-container{
 }
