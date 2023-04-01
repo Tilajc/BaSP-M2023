@@ -96,6 +96,7 @@ footer{
     background-color: #aace9b;
     border-radius: 10px;
     border: none;
+    font-size: 30px;
 }
 
 .nav-button:hover{
@@ -132,4 +133,42 @@ footer{
 .information-icon-container{
     width: 30%;
     float: left;
+}
+
+section{
+    text-align: center;
+}
+
+h1{
+    font-size: 48px;
+    color: #373867;
+}
+
+#free-template{
+    font-size: 36px;
+    color: #423C3C;
+}
+
+#description{
+    font-size: 20px;
+    color: #776262;
+}
+
+
+.info-option-container{
+    display: inline-block;
+    width: 40%;
+    margin: 50px;
+}
+
+.info-option-container p{
+    
+}
+
+.bold{
+    font-weight: bold;
+}
+
+span{
+    text-transform: uppercase;
 }
