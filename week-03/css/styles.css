@@ -63,8 +63,7 @@ footer{
 .icon2{
     width: 33px;
     height: 33px;
-    margin-bottom: -12px;
-    margin-right: 30px;
+    margin-top: 5px;
 }
 
 .icon3{
@@ -104,7 +103,7 @@ footer{
     color: #fff;
 }
 
-.button-div{
+.button-container{
     margin-top: 30px;
 }
 
@@ -115,15 +114,22 @@ footer{
     font-weight: bold;
 }
 
-.information-div{
+.information-container{
     position: relative;
-    width: 250px;
     text-align: center;
 }
 
-.information-div img{
-    margin-left: 0;
+.information-container p{
+    display: inline-block;
 }
 
-.information-div-p-container{
+.information-p-container{
+    width: 70%;
+    float: right;
+    text-align: left;
+}
+
+.information-icon-container{
+    width: 30%;
+    float: left;
 }
