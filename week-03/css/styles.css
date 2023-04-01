@@ -1,0 +1,65 @@
+header{
+    position: fixed;
+    background-color: #373867;
+    width: 100%;
+    height: 117.92px;
+    text-align: center;
+    top: 0;
+}
+
+p{
+    font-size: 14px;
+}
+
+header p{
+    color:#fff;
+    margin-top: 0;
+    padding-top: 55px;
+    font-size: 40px;
+}
+
+aside{
+    position: fixed;
+    background-color: #f6f6f6;
+    float: left;
+    width: 335px;
+    height: 100%;
+    top: 117.92px;
+}
+
+ul{
+    list-style: none;
+}
+
+main{
+    margin-left: 335px;
+    margin-top: 117.92px;
+}
+
+footer{
+    margin-left: 335px;
+}
+
+#RRlogo{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+
+.icon1{
+    width: 44px;
+    height: 39px;
+}
+
+
+.icon2{
+    width: 33px;
+    height: 33px;
+}
+
+.icon3{
+    width: 44px;
+    height: 29px;
+}
