@@ -158,44 +158,55 @@
                     Registration and/or claim
                 </h2>
                 <form>
-                    <label for="name">
-                        Name
+                    <div>
+                        <label class="label-block" for="name">
+                            Name
+                        </label>
+                        <input id="name" type="text">
+                        <label class="label-block" for="lastname">
+                            Lastname
+                        </label>
+                        <input id="lastname" type="text">
+                        <label class="label-block" for="email">
+                            E-mail
+                        </label>
+                        <input id="email" type="email">
+                    </div>
+                    <div>
+                        <input id="memberships" type="radio" name="option">
+                        <label for="memberships">
+                            I want to know memberships and costs
                     </label>
-                    <input id="name" type="text">
-                    <label for="lastname">
-                        Lastname
-                    </label>
-                    <input id="lastname" type="text">
-                    <label for="email">
-                        E-mail
-                    </label>
-                    <input id="email" type="email">
-                    <input id="memberships" type="radio" name="option">
-                    <label for="memberships">
-                        I want to know memberships and costs
-                    </label>
-                    <input id="question-suggestion" type="radio" name="option">
-                    <label for="question-suggestion">
-                        I want to make a question or suggestion
-                    </label>
-                    <input id="claim" type="radio" name="option">
-                    <label for="claim">
-                        I want to make a claim
-                    </label>
-                    <label for="comments">
-                        Comments
-                    </label>
-                    <textarea id="comments" name="Comments" cols="30" rows="10">
-                    </textarea>
-                    <input type="submit" value="Send">
-                    <input type="reset" value="Cancel">
+                    </div>
+                    <div>
+                        <input id="question-suggestion" type="radio" name="option">
+                        <label for="question-suggestion">
+                            I want to make a question or suggestion
+                        </label>
+                    </div>
+                    <div>
+                        <input id="claim" type="radio" name="option">
+                        <label for="claim">
+                            I want to make a claim
+                        </label>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="comments">
+                                Comments
+                            </label>
+                        </div>
+                        <textarea id="comments" name="Comments" cols="30" rows="10">
+                        </textarea>
+                    </div>
+                    <input class="form-send" type="submit" value="Send">
                 </form>
             </section>
             <section>
                 <h2>
                     About us
                 </h2>
-                    <p>
+                    <p id="about-us-p">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                         Ab fugiat natus delectus doloribus atque. Perspiciatis, atque.
                         Necessitatibus laborum iste vero deserunt odit quibusdam 
