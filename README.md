@@ -12,7 +12,7 @@ During the second week I have been working with HTML, Git, and Github. I adapted
 
 ## Week-03
 
-Placeholder (doing a BaSP-W02-2023 commit)
+During the third week I have been working with CSS, Git, and Githu. I did the pixel perfect page just like we did in figma.
 
 ## Run Locally
 
