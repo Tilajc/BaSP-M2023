@@ -35,10 +35,6 @@ main{
     margin-top: 117.92px;
 }
 
-ul{
-    list-style: none;
-}
-
 footer{
     margin-left: 335px;
 }
@@ -207,4 +203,49 @@ textarea{
     margin: 20px 0;
     width: 364px;
     height: 137px;
+}
+
+.activity{
+    display: inline-block;
+    width: 30%;
+}
+
+#activity-container{
+    margin-left: 263px;
+    text-align: left;
+}
+
+h3{
+    display: inline-block;
+    width: 311px;
+    height: 40px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#black{
+    background-color: #000;
+    color: #fff;
+}
+
+#classic{
+    background-color: #CCCBCB;
+}
+
+#only-classes{
+    background-color: #ededed;
+}
+
+ul{
+    list-style: none;
+}
+
+footer div{
+    display: inline-block;
+    margin-left: 150px;
+}
+
+footer a{
+    margin-left: 100px;
 }
