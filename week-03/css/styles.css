@@ -76,11 +76,10 @@ button:hover{
     color: #fff;
 }
 
-hr{
+.divisor{
     width: 500px;
     height: 5px;
-    margin-top: 160px;
-    margin-bottom: 70px;
+    margin: 160px auto 70px;
     background-color: #bebebe;
 }
 
