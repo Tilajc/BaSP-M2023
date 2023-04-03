@@ -1,3 +1,7 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 header{
     position: fixed;
     width: 100%;
@@ -72,6 +76,14 @@ button:hover{
     color: #fff;
 }
 
+hr{
+    width: 500px;
+    height: 5px;
+    margin-top: 160px;
+    margin-bottom: 70px;
+    background-color: #bebebe;
+}
+
 span{
     text-transform: uppercase;
 }
@@ -122,6 +134,7 @@ li{
 footer{
     margin-left: 335px;
     padding-bottom: 15px;
+    margin-top: 130px;
 }
 
 footer div{
@@ -223,6 +236,7 @@ a{
 }
 
 #free-template{
+    margin-top: 19px;
     font-size: 36px;
     color: #423C3C;
 }
@@ -230,6 +244,7 @@ a{
 #description{
     font-size: 20px;
     color: #776262;
+    margin-bottom: 185px;
 }
 
 .info-option-container{
@@ -266,6 +281,12 @@ a{
     width: 30%;
 }
 
+.activity p{
+    margin-top: 18px;
+    margin-bottom: 100px;
+    font-weight: bold;
+}
+
 #black{
     background-color: #000;
     color: #fff;
@@ -273,10 +294,12 @@ a{
 
 #classic{
     background-color: #CCCBCB;
+    margin-top: 50px;
 }
 
 #only-classes{
     background-color: #ededed;
+    margin-top: 50px;
 }
 
 #RRlogo{
