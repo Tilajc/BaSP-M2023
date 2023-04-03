@@ -120,6 +120,7 @@ textarea{
     width: 364px;
     height: 137px;
     margin: 20px 0;
+    box-shadow: 5px 5px 5px rgb(178, 178, 178);
 }
 
 ul{
