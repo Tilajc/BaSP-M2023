@@ -12,8 +12,10 @@ header{
 }
 
 h1{
+    max-width: 530px;
     margin-top: 150px;
     margin-bottom: 40px;
+    margin: 150px auto 40px;
     font-size: 48px;
     color: #373867;
 }
@@ -236,7 +238,8 @@ a{
 }
 
 #free-template{
-    margin-top: 19px;
+    margin: 19px auto 0;
+    max-width: 680px;
     font-size: 36px;
     color: #423C3C;
 }
