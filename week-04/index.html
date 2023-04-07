@@ -6,57 +6,82 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/flex.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/aside.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/main.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <title>Mega Rocket Gym</title>
     </head>
     <body>
-        <header>
+        <header class="flex">
             <p>
                 Mega Rocket SA
             </p>
         </header>
-        <aside>
+        <aside class="flex column">
             <nav>
-                <input type="search" placeholder="search">
-                <img src="../assets/img/searcher.png" alt="magnifying glass">
-                <img src="../assets/img/house.png" alt="House">
-                <button>
-                    Home
-                </button>
-                <img src="../assets/img/plus.png" alt="Plus">
-                <button>
-                    Sing Up
-                </button>
-                <img src="../assets/img/people.png" alt="Sign in">
-                <button>
-                    Sign in
-                </button>
-                <img src="../assets/img/files.png" alt="Contact">
-                <button>
-                    Contact
-                </button>
+                <div>
+                    <input type="search" placeholder="search">
+                    <img src="../assets/img/searcher.png" alt="magnifying glass">
+                </div>
+                <div class="flex button-container">
+                    <img class="icon1" src="../assets/img/house.png" alt="House">
+                    <button class="nav-button">
+                        Home
+                    </button>
+                </div>
+                <div class="flex button-container">
+                    <img class="icon1" src="../assets/img/plus.png" alt="Plus">
+                    <button class="nav-button">
+                        Sing Up
+                    </button>
+                </div>
+                <div class="flex button-container">
+                    <img class="icon3" src="../assets/img/people.png" alt="Sign in">
+                    <button class="nav-button">
+                        Sign in
+                    </button>
+                </div>
+                <div class="flex button-container">
+                    <img class="icon1" src="../assets/img/files.png" alt="Contact">
+                    <button class="nav-button">
+                        Contact
+                    </button>
+                </div>
             </nav>
-            <p>
-                Information
-            </p>
-            <img src="../assets/img/email.png" alt="Email">
-            <p>
-                information@untitled.tld
-            </p>
-            <img src="../assets/img/phone.png" alt="Phone">
-            <p>
-                (000) 000-0000
-            </p>
-            <img src="../assets/img/house.png" alt="Address">
-            <p>
-                1234 Somewhere Road
-            </p>
-            <p>
-                #8254Nashville, TN
-            </p>
-            <p>
-                00000-0000
-            </p>
+            <div class="flex column information">
+                <p class="bold">
+                    Information
+                </p>
+                <div class="flex information-container-1">
+                    <img class="icon2" src="../assets/img/email.png" alt="Email">
+                    <p>
+                        information@untitled.tld
+                    </p>
+                </div>
+                <div class="flex information-container-1">
+                    <img class="icon2" src="../assets/img/phone.png" alt="Phone">
+                    <p>
+                        (000) 000-0000
+                    </p>
+                </div>
+                <div class="flex information-container-2">
+                    <img class="icon2" src="../assets/img/house.png" alt="Address">
+                    <div>
+                        <p>
+                            1234 Somewhere Road
+                        </p>
+                        <p>
+                            #8254Nashville, TN
+                        </p>
+                        <p>
+                            00000-0000
+                        </p>
+                    </div>
+                </div>
+            </div>
         </aside>
         <main>
             <section>
@@ -249,7 +274,7 @@
                 </ul>
             </section>
         </main>
-        <img src="../assets/img/gym-Logo.png" alt="Logo Mega Rocket SA">
+        <img id="RR-logo" src="../assets/img/gym-Logo.png" alt="Logo Mega Rocket SA">
         <footer>
             <a href="https://www.google.com/">
                 <img src="../assets/img/snapchat.png" alt="Snapchat">

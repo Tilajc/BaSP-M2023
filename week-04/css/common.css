@@ -1,3 +1,18 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+
+.bold{
+    font-weight: 700;
+}
+
+
+
+
+
+
+#RR-logo{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
