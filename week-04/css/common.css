@@ -3,14 +3,20 @@ body{
 }
 
 p{
-    font-size: 14px;
+    font-size: 0.87rem;
     font-weight: 500;
 }
 
-button:hover{
+.button{
+    background-color: #aace9b;
+    border: none;
+}
+
+.button:hover{
     background-color: #000;
     color: #fff;
 }
+
 .bold{
     font-weight: 700;
 }
@@ -20,7 +26,7 @@ button:hover{
 }
 
 h2{
-    font-size: 40px;
+    font-size: 2.5rem;
     color: #373867;
 }
 

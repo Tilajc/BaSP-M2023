@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/aside.css">
         <link rel="stylesheet" href="./css/footer.css">
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/content.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <title>Mega Rocket Gym</title>
     </head>
@@ -28,25 +28,25 @@
                 </div>
                 <div class="flex button-container">
                     <img class="icon1" src="../assets/img/house.png" alt="House">
-                    <button class="nav-button">
+                    <button class="button nav-button">
                         Home
                     </button>
                 </div>
                 <div class="flex button-container">
                     <img class="icon1" src="../assets/img/plus.png" alt="Plus">
-                    <button class="nav-button">
+                    <button class="button nav-button">
                         Sing Up
                     </button>
                 </div>
                 <div class="flex button-container">
                     <img class="icon3" src="../assets/img/people.png" alt="Sign in">
-                    <button class="nav-button">
+                    <button class="button nav-button">
                         Sign in
                     </button>
                 </div>
                 <div class="flex button-container">
                     <img class="icon1" src="../assets/img/files.png" alt="Contact">
-                    <button class="nav-button">
+                    <button class="button nav-button">
                         Contact
                     </button>
                 </div>
@@ -100,43 +100,51 @@
                 </p>
             </section>
             <div class="divisor"></div>
-            <section class="flex column">
-                <img src="../assets/img/calendar1.png" alt="Calendar">
-                <p class="bold">
-                    Appointment booking
-                </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
-                    Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
-                </p>
-                <img src="../assets/img/calendar2.png" alt="Calendar">
-                <p class="bold">
-                    Calendar and opening hours
-                </p>
-                <p class="bold">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
-                    Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
-                </p>
-                <img src="../assets/img/credit-cards.png" alt="Credit Cards">
-                <p class="bold">
-                    Management and membership
-                </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
-                    Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
-                </p>
-                <img src="../assets/img/notes.png" alt="Notes">
-                <p class="bold">
-                    Contact form and suggestions
-                </p>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
-                    Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
-                </p>
+            <section class="flex info-section">
+                <div class="flex column info">
+                    <img id="calendar1" src="../assets/img/calendar1.png" alt="Calendar">
+                    <p class="bold">
+                        Appointment booking
+                    </p>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
+                        Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
+                    </p>
+                </div>
+                <div class="flex column info">
+                    <img id="calendar2" src="../assets/img/calendar2.png" alt="Calendar">
+                    <p class="bold">
+                        Calendar and opening hours
+                    </p>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
+                        Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
+                    </p>
+                </div>
+                <div class="flex column info">
+                    <img id="credit-cards" src="../assets/img/credit-cards.png" alt="Credit Cards">
+                    <p class="bold">
+                        Management and membership
+                    </p>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
+                        Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
+                    </p>
+                </div>
+                <div class="flex column info">
+                    <img id="notes" src="../assets/img/notes.png" alt="Notes">
+                    <p class="bold">
+                        Contact form and suggestions
+                    </p>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
+                        Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
+                    </p>
+                </div>
             </section>
             <div class="divisor"></div>
             <section class="flex column">
@@ -144,86 +152,88 @@
                     Registration and/or claim
                 </h2>
                 <form>
-                    <div>
+                    <div class="flex form-option">
                         <label for="name">
                             Name
                         </label>
                     </div>
-                    <div>
+                    <div class="flex form-option">
                         <input id="name" type="text">
                     </div>
-                    <div>
+                    <div class="flex form-option">
                         <label for="lastname">
                             Lastname
                         </label>
                     </div>
-                    <div class="flex">
+                    <div  class="flex form-option">
                         <input id="lastname" type="text">
                     </div>
-                    <div class="flex">
+                    <div class="flex form-option">
                         <label for="email">
                             E-mail
                         </label>
                     </div>
-                    <div class="flex">
+                    <div class="flex form-option">
                         <input id="email" type="email">
                     </div>
-                    <div class="flex">
+                    <div class="flex form-option">
                         <input id="memberships" type="radio" name="option">
                         <label for="memberships">
                             I want to know memberships and costs
                         </label>
                     </div>
-                    <div>
+                    <div class="flex form-option">
                     <input id="question-suggestion" type="radio" name="option">
                         <label for="question-suggestion">
                             I want to make a question or suggestion
                         </label>
                     </div>
-                    <div>
+                    <div class="flex form-option">
                         <input id="claim" type="radio" name="option">
                         <label for="claim">
                             I want to make a claim
                         </label>
                     </div>
-                    <div>
+                    <div class="flex form-option">
                         <label for="comments">
                             Comments
                         </label>
                     </div>
-                    <div>
+                    <div class="flex form-option">
                         <textarea id="comments" name="Comments" cols="30" rows="10"></textarea>
                     </div>
-                    <div>
-                        <input type="submit" value="Send">
+                    <div class="flex form-option">
+                        <input class="button" type="submit" value="Send">
                     </div>
                 </form>
             </section>
             <div class="divisor"></div>
-            <section>
+            <section class="flex column">
                 <h2>
                     About us
                 </h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Ab fugiat natus delectus doloribus atque. Perspiciatis, atque.
-                    Necessitatibus laborum iste vero deserunt odit quibusdam 
-                    provident reiciendis, quam eaque tempora blanditiis nulla?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Ab fugiat natus delectus doloribus atque. Perspiciatis, atque.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Ab fugiat natus delectus doloribus atque. Perspiciatis, atque.
-                    Necessitatibus laborum iste vero deserunt odit quibusdam 
-                    provident reiciendis, quam eaque tempora blanditiis nulla?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Ab fugiat natus delectus doloribus atque. Perspiciatis, atque.
-                    Necessitatibus laborum iste vero deserunt odit quibusdam 
-                    provident reiciendis, quam eaque tempora blanditiis nulla?
-                </p>
+                <div id="about-us-p">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Ab fugiat natus delectus doloribus atque. Perspiciatis, atque.
+                        Necessitatibus laborum iste vero deserunt odit quibusdam 
+                        provident reiciendis, quam eaque tempora blanditiis nulla?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Ab fugiat natus delectus doloribus atque. Perspiciatis, atque.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Ab fugiat natus delectus doloribus atque. Perspiciatis, atque.
+                        Necessitatibus laborum iste vero deserunt odit quibusdam 
+                        provident reiciendis, quam eaque tempora blanditiis nulla?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Ab fugiat natus delectus doloribus atque. Perspiciatis, atque.
+                        Necessitatibus laborum iste vero deserunt odit quibusdam 
+                        provident reiciendis, quam eaque tempora blanditiis nulla?
+                    </p>
+                </div>
             </section>
             <div class="divisor"></div>
             <section>
@@ -253,7 +263,7 @@
             </section>
             <div class="divisor"></div>
             <section>
-                <h3>
+                <h3 id="black">
                     Membership Black
                 </h3>
                 <ul>
@@ -270,7 +280,7 @@
                         Grid display
                     </li>
                 </ul>
-                <h3>
+                <h3 id="classic">
                     Membership Classic
                 </h3>
                 <ul>
@@ -284,7 +294,7 @@
                         Grid display
                     </li>
                 </ul>
-                <h3>
+                <h3 id="only-classes">
                     Membership Only Classes
                 </h3>
                 <ul>
