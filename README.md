@@ -14,6 +14,15 @@ During the second week I have been working with HTML, Git, and Github. I adapted
 
 During the third week I have been working with HTML, CSS, Git, and Github. I did the pixel perfect page just like we did in figma.
 
+## Week-04
+
+During the four week I have been working with HTML, CSS, Git, and Github again. But this time I did the gym page responsive using Flexbox and Media Queries.
+
+## Run in Github pages
+
+```bash
+  https://tilajc.github.io/BaSP-M2023/week-04
+```
 ## Run Locally
 
 Clone the project
