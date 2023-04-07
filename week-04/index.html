@@ -22,8 +22,8 @@
         </header>
         <aside class="flex column">
             <nav>
-                <div>
-                    <input type="search" placeholder="search">
+                <div id="search-container" class="flex">
+                    <input class="search" type="search" placeholder="search">
                     <img src="../assets/img/searcher.png" alt="magnifying glass">
                 </div>
                 <div class="flex button-container">
@@ -84,12 +84,12 @@
             </div>
         </aside>
         <main>
-            <section>
+            <section class="flex column">
                 <h1>
-                    Hi, and welcome to Mega Rocket SA Gym
+                    Hi, and welcome to <span class="uppercase">Mega Rocket SA</span> Gym
                 </h1>
-                <img src="../assets/img/gym.png" alt="Gym">
-                <h2>
+                <img id="gym-img" src="../assets/img/gym.png" alt="Gym">
+                <h2 id="free-template" class="uppercase">
                     A free and fully responsive site template
                 </h2>
                 <p>
@@ -100,9 +100,9 @@
                 </p>
             </section>
             <div class="divisor"></div>
-            <section>
+            <section class="flex column">
                 <img src="../assets/img/calendar1.png" alt="Calendar">
-                <p>
+                <p class="bold">
                     Appointment booking
                 </p>
                 <p>
@@ -111,16 +111,16 @@
                     Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
                 </p>
                 <img src="../assets/img/calendar2.png" alt="Calendar">
-                <p>
+                <p class="bold">
                     Calendar and opening hours
                 </p>
-                <p>
+                <p class="bold">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
                     Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
                 </p>
                 <img src="../assets/img/credit-cards.png" alt="Credit Cards">
-                <p>
+                <p class="bold">
                     Management and membership
                 </p>
                 <p>
@@ -129,7 +129,7 @@
                     Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
                 </p>
                 <img src="../assets/img/notes.png" alt="Notes">
-                <p>
+                <p class="bold">
                     Contact form and suggestions
                 </p>
                 <p>
@@ -139,41 +139,64 @@
                 </p>
             </section>
             <div class="divisor"></div>
-            <section>
-                <h3>
+            <section class="flex column">
+                <h2>
                     Registration and/or claim
-                </h3>
+                </h2>
                 <form>
-                    <label for="name">
-                        Name
-                    </label>
-                    <input id="name" type="text">
-                    <label for="lastname">
-                        Lastname
-                    </label>
-                    <input id="lastname" type="text">
-                    <label for="email">
-                        E-mail
-                    </label>
-                    <input id="email" type="email">
-                    <input id="memberships" type="radio" name="option">
-                    <label for="memberships">
-                        I want to know memberships and costs
-                    </label>
+                    <div>
+                        <label for="name">
+                            Name
+                        </label>
+                    </div>
+                    <div>
+                        <input id="name" type="text">
+                    </div>
+                    <div>
+                        <label for="lastname">
+                            Lastname
+                        </label>
+                    </div>
+                    <div class="flex">
+                        <input id="lastname" type="text">
+                    </div>
+                    <div class="flex">
+                        <label for="email">
+                            E-mail
+                        </label>
+                    </div>
+                    <div class="flex">
+                        <input id="email" type="email">
+                    </div>
+                    <div class="flex">
+                        <input id="memberships" type="radio" name="option">
+                        <label for="memberships">
+                            I want to know memberships and costs
+                        </label>
+                    </div>
+                    <div>
                     <input id="question-suggestion" type="radio" name="option">
-                    <label for="question-suggestion">
-                        I want to make a question or suggestion
-                    </label>
-                    <input id="claim" type="radio" name="option">
-                    <label for="claim">
-                        I want to make a claim
-                    </label>
-                    <label for="comments">
-                        Comments
-                    </label>
-                    <textarea id="comments" name="Comments" cols="30" rows="10"></textarea>
-                    </textarea>
-                    <input type="submit" value="Send">
+                        <label for="question-suggestion">
+                            I want to make a question or suggestion
+                        </label>
+                    </div>
+                    <div>
+                        <input id="claim" type="radio" name="option">
+                        <label for="claim">
+                            I want to make a claim
+                        </label>
+                    </div>
+                    <div>
+                        <label for="comments">
+                            Comments
+                        </label>
+                    </div>
+                    <div>
+                        <textarea id="comments" name="Comments" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Send">
+                    </div>
                 </form>
             </section>
             <div class="divisor"></div>
@@ -204,9 +227,9 @@
             </section>
             <div class="divisor"></div>
             <section>
-                <h3>
+                <h2>
                     Activities
-                </h3>
+                </h2>
                 <img src="../assets/img/crossfit.png" alt="Crossfit">
                 <p>
                     Crossfit
@@ -230,9 +253,9 @@
             </section>
             <div class="divisor"></div>
             <section>
-                <h4>
+                <h3>
                     Membership Black
-                </h4>
+                </h3>
                 <ul>
                     <li>
                         Free access to Bodybuilding
@@ -247,9 +270,9 @@
                         Grid display
                     </li>
                 </ul>
-                <h4>
+                <h3>
                     Membership Classic
-                </h4>
+                </h3>
                 <ul>
                     <li>
                         Free acces to the weight room
@@ -261,9 +284,9 @@
                         Grid display
                     </li>
                 </ul>
-                <h4>
+                <h3>
                     Membership Only Classes
-                </h4>
+                </h3>
                 <ul>
                     <li>
                         Personalized monitoring by a coach

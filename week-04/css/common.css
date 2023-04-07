@@ -2,17 +2,32 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+p{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+button:hover{
+    background-color: #000;
+    color: #fff;
+}
 .bold{
     font-weight: 700;
 }
 
+.uppercase{
+    text-transform: uppercase;
+}
 
-
-
-
+h2{
+    font-size: 40px;
+    color: #373867;
+}
 
 #RR-logo{
     position: fixed;
+    width: 13%;
+    max-width: 112px;
     bottom: 20px;
     right: 20px;
 }

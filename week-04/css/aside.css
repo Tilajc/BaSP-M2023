@@ -6,6 +6,22 @@ aside{
     justify-content: space-around;
 }
 
+#search-container{
+    justify-content: space-around;
+    align-items: center;
+    width: 290px;
+    height: 36px;
+    border-radius: 4;
+    background-color: #ffffff;
+}
+
+.search{
+    width: 255px;
+    height: 36px;
+    border: none;
+    background-color: #fff;
+}
+
 .button-container{
     height: 60px;
     justify-content: space-around;
