@@ -5,3 +5,7 @@
 .column{
     flex-direction: column;
 }
+
+.wrap{
+    flex-wrap: wrap;
+}

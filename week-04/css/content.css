@@ -5,6 +5,8 @@ main{
 section{
     align-items: center;
     justify-content: center;
+    text-align: center;
+    width: 100%;
 }
 
 h1{
@@ -18,7 +20,6 @@ h1{
     max-width: 680px;
     font-size: 2.25rem;
     color: #423C3C;
-    text-align: center;
 }
 
 #gym-img{
@@ -35,8 +36,6 @@ h1{
 }
 
 .info-section{
-    flex-wrap: wrap;
-    width: 100%;
     text-align: center;
 }
 
@@ -44,6 +43,16 @@ h1{
     align-items: center;
     width: 50%;
     min-width: 375px;
+    box-sizing: border-box;
+}
+
+.info-img-container{
+    height: 213px;
+    align-items: flex-end;
+}
+
+.info p{
+    max-width: 500px;
 }
 
 #calendar1{
@@ -60,6 +69,7 @@ h1{
 
 #notes{
     width: 177px;
+    margin-bottom: 20px;
 }
 
 .form-option{
@@ -83,7 +93,49 @@ input[type="submit"]{
 }
 
 #about-us-p{
-    margin: 147px 180px;
+    width: 80%;
     padding: 60px 30px;
     background-color: rgba(170, 206, 155, 0.1);;
+    box-sizing: border-box;
+}
+
+#activities{
+    align-items: center;
+    width: 100%;
+}
+
+.activity-container{
+    min-width: 260px;
+    margin: 0;
+    height: 230px;
+}
+
+.activity-img{
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+}
+
+h3{
+    display: inline-block;
+    width: 311px;
+    height: 40px;
+    padding-top: 12px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#black{
+    background-color: #000;
+    color: #fff;
+}
+
+#classic{
+    background-color: #CCCBCB;
+    margin-top: 50px;
+}
+
+#only-classes{
+    background-color: #ededed;
+    margin-top: 50px;
 }

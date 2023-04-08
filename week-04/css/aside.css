@@ -10,12 +10,6 @@ aside{
     align-self: flex-end;
 }
 
-.nav-info-container{
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-}
-
 #search-container{
     justify-content: space-around;
     align-items: center;
@@ -25,6 +19,13 @@ aside{
     border-width: 1px;
     border-radius: 4px;
     background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.nav-info-container{
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
 }
 
 .search{
@@ -68,7 +69,6 @@ aside{
 .information-container{
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
     margin-top: 20px;
 }
 
