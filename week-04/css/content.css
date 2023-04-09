@@ -4,39 +4,46 @@ main{
 
 section{
     align-items: center;
-    justify-content: center;
     text-align: center;
     width: 100%;
 }
 
 h1{
+    margin: 20px 0;
     max-width: 530px;
     font-size: 3rem;
     color: #373867;
 }
 
-#free-template{
-    width: 85%;
-    max-width: 680px;
-    font-size: 2.25rem;
-    color: #423C3C;
+li{
+    margin: 30px 0;
 }
 
 #gym-img{
     width: 85%;
     max-width: 852px;
+    margin-bottom: 20px;
+}
+
+#free-template{
+    width: 85%;
+    margin-bottom: 50px;
+    max-width: 680px;
+    font-size: 2.25rem;
+    color: #423C3C;
 }
 
 .divisor{
     width: 70%;
     max-width: 500px;
     height: 5px;
-    margin:auto;
+    margin: 100px auto;
     background-color: #bebebe;
 }
 
 .info-section{
     text-align: center;
+    justify-content: center;
 }
 
 .info{
@@ -74,6 +81,11 @@ h1{
 
 .form-option{
     justify-content: center;
+    margin: 25px 0;
+}
+
+.form-option label{
+    margin: 0;
 }
 
 input[type="text"], input[type="email"]{
@@ -105,8 +117,10 @@ input[type="submit"]{
 }
 
 .activity-container{
+    display: inline-block;
+    width: 30%;
     min-width: 260px;
-    margin: 0;
+    margin: 25px 20px;
     height: 230px;
 }
 
@@ -116,13 +130,13 @@ input[type="submit"]{
     object-fit: cover;
 }
 
-h3{
-    display: inline-block;
+.h3-container{
+    justify-content: center;
+    align-items: center;
     width: 311px;
     height: 40px;
-    padding-top: 12px;
     border-radius: 5px;
-    box-sizing: border-box;
+    font-weight: 700;
 }
 
 #black{
