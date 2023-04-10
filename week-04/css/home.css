@@ -1,0 +1,26 @@
+#gym-img{
+    order: 1;
+    width: 85%;
+    max-width: 852px;
+    margin: 20px;
+}
+
+#free-template{
+    width: 85%;
+    margin-bottom: 50px;
+    max-width: 680px;
+    font-size: 2.25rem;
+    color: #423C3C;
+}
+
+@media screen and (min-width: 600px) {
+    #gym-img{
+        order: -1;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #gym-img{
+        order: 0;
+    }
+}

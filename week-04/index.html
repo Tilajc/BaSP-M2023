@@ -5,23 +5,29 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/common.css">
         <link rel="stylesheet" href="./css/flex.css">
+        <link rel="stylesheet" href="./css/common.css">
         <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/aside.css">
+        <link rel="stylesheet" href="./css/home.css">
+        <link rel="stylesheet" href="./css/info.css">
+        <link rel="stylesheet" href="./css/form.css">
+        <link rel="stylesheet" href="./css/about-us.css">
+        <link rel="stylesheet" href="./css/activities.css">
+        <link rel="stylesheet" href="./css/memberships.css">
         <link rel="stylesheet" href="./css/footer.css">
-        <link rel="stylesheet" href="./css/content.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <title>Mega Rocket Gym</title>
     </head>
     <body>
-        <header class="flex">
+        <header>
             <p>
                 Mega Rocket SA
             </p>
         </header>
-        <aside id="none" class="flex column">
-            <img id="hamburger-menu" src="../assets/img/hamburger1.png" alt="hamburger menu">
+        <img class="hamburger-menu hamburger-menu-main" src="../assets/img/hamburger1.png" alt="hamburger menu">
+        <aside>
+            <img class="hamburger-menu hamburger-menu-aside" src="../assets/img/hamburger1.png" alt="hamburger menu">
             <div class="flex column nav-info-container">
                 <nav>
                     <div id="search-container" class="flex">
@@ -303,52 +309,57 @@
                         Membership Black
                     </h3>
                 </div>
-                <ul>
-                    <li>
-                        Free access to Bodybuilding
-                    </li>
-                    <li>
-                        Free access to classes prior registration
-                    </li>
-                    <li>
-                        Follow-up analyzed by coach
-                    </li>
-                    <li>
-                        Grid display
-                    </li>
-                </ul>
+                <div class="ul-container">
+                    <ul>
+                        <li>
+                            Free access to Bodybuilding
+                        </li>
+                        <li>
+                            Free access to classes prior registration
+                        </li>
+                        <li>
+                            Follow-up analyzed by coach
+                        </li>
+                        <li>
+                            Grid display
+                        </li>
+                    </ul>
+                </div>
                 <div id="classic" class="flex h3-container">
                     <h3>
                         Membership Classic
                     </h3>
                 </div>
-                <ul>
-                    <li>
-                        Free acces to the weight room
-                    </li>
-                    <li>
-                        Personalized monitoring by a coach
-                    </li>
-                    <li>
-                        Grid display
-                    </li>
-                </ul>
+                <div class="ul-container">
+                    <ul>
+                        <li>
+                            Free acces to the weight room
+                        </li>
+                        <li>
+                            Personalized monitoring by a coach
+                        </li>
+                        <li>
+                            Grid display
+                        </li>
+                    </ul>
+                </div>
                 <div id="only-classes" class="flex h3-container">
                     <h3>
                         Membership Only Classes
                     </h3>
                 </div>
-                <ul>
-                    <li>
-                        Personalized monitoring by a coach
-                    </li>
-                    <li>
-                        Grid display
-                    </li>
-                </ul>
+                <div class="ul-container">
+                    <ul>
+                        <li>
+                            Personalized monitoring by a coach
+                        </li>
+                        <li>
+                            Grid display
+                        </li>
+                    </ul>
+                </div>
             </section>
         </main>
-        <img id="RR-logo" src="../assets/img/gym-Logo.png" alt="Logo Mega Rocket SA">
         <footer>
             <div class="flex wrap">
                 <div class="social-media-container">
@@ -390,6 +401,7 @@
                     Copyright © 2022 Radium Rocket. All rights reserved.
                 </p>
             </div>
+            <img id="RR-logo" src="../assets/img/gym-Logo.png" alt="Logo Mega Rocket SA">
         </footer>
     </body>
 </html>

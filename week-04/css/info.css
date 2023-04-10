@@ -1,0 +1,37 @@
+.info-section{
+    text-align: center;
+    justify-content: center;
+}
+
+.info{
+    align-items: center;
+    width: 50%;
+    min-width: 375px;
+    box-sizing: border-box;
+}
+
+.info-img-container{
+    height: 213px;
+    align-items: flex-end;
+}
+
+.info p{
+    max-width: 500px;
+}
+
+#calendar1{
+    width: 214px;
+}
+
+#calendar2{
+    width: 145px;
+}
+
+#credit-cards{
+    width: 249px;
+}
+
+#notes{
+    width: 177px;
+    margin-bottom: 20px;
+}

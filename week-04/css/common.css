@@ -7,6 +7,30 @@ p{
     font-weight: 500;
 }
 
+header{
+    display: none;
+    width: 100%;
+    height: 14%;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #373867;
+    z-index: 2;
+}
+
+header p{
+    margin-bottom: 10px;
+    font-size: 40px;
+    color:#fff;
+}
+
+aside{
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+    align-items: center;
+    display: none;
+}
+
 .button{
     background-color: #aace9b;
     border: none;
@@ -34,10 +58,74 @@ a{
     text-decoration: none;
 }
 
+section{
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+h1{
+    margin: 20px;
+    max-width: 530px;
+    font-size: 3rem;
+    color: #373867;
+}
+
+li{
+    margin: 30px 0;
+}
+
 #RR-logo{
-    position: fixed;
     width: 13%;
     max-width: 112px;
-    bottom: 20px;
-    right: 20px;
+    text-align: center;
+}
+
+@media screen and (min-width:600px) {
+    #RR-logo{
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+    }
+}
+
+.divisor{
+    width: 70%;
+    max-width: 500px;
+    height: 5px;
+    margin: 100px auto;
+    background-color: #bebebe;
+}
+
+@media screen and (min-width: 1024px) {
+    header{
+        position: fixed;
+        top: 0;
+    }
+
+    #aside-hider{
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside{
+        position: fixed;
+        top: 14%;
+        left: 0;
+        height: 86%;
+        width: 335px;
+    }
+
+    main{
+        margin-top: 119px;
+        margin-left: 335px;
+    }
+
+    footer{
+        margin-left: 335px;
+    }
+
+    #hamburger-menu{
+        display: none;
+    }
 }
