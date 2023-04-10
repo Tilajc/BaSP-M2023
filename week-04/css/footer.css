@@ -1,0 +1,29 @@
+footer{
+    text-align: center;
+}
+
+footer div{
+    text-align: center;
+}
+
+.social-media-container{
+    height: 50px;
+    width: 33.3%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px){
+    .social-media-container{
+        width: 16.6%;
+    }
+}
+
+#footer-text{
+    width: 100%;
+    text-align: center;
+}
+
+#footer-text p{
+    width: 100%;
+}

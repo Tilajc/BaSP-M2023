@@ -7,7 +7,7 @@ aside{
 
 #hamburger-menu{
     justify-self: flex-start;
-    align-self: flex-end;
+    align-self: flex-start;
 }
 
 #search-container{

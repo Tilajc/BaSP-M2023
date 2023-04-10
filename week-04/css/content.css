@@ -2,6 +2,31 @@ main{
     align-items: center;
 }
 
+@media screen and (min-width: 600px) {
+    header{
+        position: fixed;
+    }
+
+    aside{
+        position: fixed;
+        left: 0;
+        width: 300px;
+        top: 117.92px;
+    }
+
+    main{
+        margin-left: 300px;
+    }
+
+    footer{
+        margin-left: 300px;
+    }
+
+    #hamburger-menu{
+        display: none;
+    }
+}
+
 section{
     align-items: center;
     text-align: center;
