@@ -1,0 +1,172 @@
+#gym-img{
+    order: -1;
+    width: 85%;
+    max-width: 852px;
+    margin: 20px;
+}
+
+#free-template{
+    width: 85%;
+    margin-bottom: 50px;
+    max-width: 680px;
+    font-size: 2.25rem;
+    color: #423C3C;
+}
+
+@media screen and (min-width: 600px) {
+    #gym-img{
+        order: 1;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #gym-img{
+        order: 0;
+    }
+}
+
+.info-section{
+    text-align: center;
+    justify-content: center;
+}
+
+.info{
+    align-items: center;
+    width: 48%;
+    min-width: 375px;
+    box-sizing: border-box;
+}
+
+.info-img-container{
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 50%;
+    align-items: flex-end;
+}
+
+.info-text-container{
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 50%;
+    text-align: center;
+}
+
+.info p{
+    max-width: 500px;
+}
+
+#calendar1{
+    width: 214px;
+}
+
+#calendar2{
+    width: 145px;
+}
+
+#credit-cards{
+    width: 249px;
+}
+
+#notes{
+    width: 177px;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1024px){
+    .info-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 50%;
+    }
+
+    .info-text-container p{
+        display: inline-block;
+    }
+}
+
+input[type="text"], input[type="email"]{
+    margin: auto;
+    width: 260px;
+    background-color: #D9D9D9;
+}
+
+textarea{
+    width: 364px;
+    height: 137px;
+    box-shadow: 5px 5px 5px rgb(178, 178, 178);
+}
+
+.radio-label-container{
+    text-align: left;
+}
+
+input[type="submit"]{
+    width: 109px;
+    height: 33px;
+    border-radius: 5px;
+}
+
+#about-us-p{
+    width: 80%;
+    padding: 60px 30px;
+    background-color: rgba(170, 206, 155, 0.1);
+    box-sizing: border-box;
+}
+
+#activities{
+    align-items: center;
+    width: 100%;
+}
+
+.activity-container{
+    display: inline-block;
+    width: 30%;
+    min-width: 260px;
+    margin: 25px 13px;
+    height: 230px;
+}
+
+.activity-img{
+    width: 260px;
+    height: 200px;
+    object-fit: contain;
+}
+
+@media screen and (min-width:600px) {
+    .activity-img{
+        width: 260px;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+.h3-container{
+    justify-content: center;
+    align-items: center;
+    width: 311px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+#black{
+    background-color: #000;
+    color: #fff;
+}
+
+#classic{
+    background-color: #CCCBCB;
+    margin-top: 50px;
+}
+
+#only-classes{
+    background-color: #ededed;
+    margin-top: 50px;
+}
+
+.ul-container{
+    text-align: left;
+}

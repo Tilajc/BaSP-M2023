@@ -9,24 +9,19 @@
         <link rel="stylesheet" href="./css/common.css">
         <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/aside.css">
-        <link rel="stylesheet" href="./css/home.css">
-        <link rel="stylesheet" href="./css/info.css">
-        <link rel="stylesheet" href="./css/form.css">
-        <link rel="stylesheet" href="./css/about-us.css">
-        <link rel="stylesheet" href="./css/activities.css">
-        <link rel="stylesheet" href="./css/memberships.css">
+        <link rel="stylesheet" href="./css/content.css">
         <link rel="stylesheet" href="./css/footer.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <title>Mega Rocket Gym</title>
     </head>
     <body>
-        <header>
+        <header class="flex center">
             <p>
                 Mega Rocket SA
             </p>
         </header>
         <img class="hamburger-menu hamburger-menu-main" src="../assets/img/hamburger1.png" alt="hamburger menu">
-        <aside>
+        <aside class="none center">
             <img class="hamburger-menu hamburger-menu-aside" src="../assets/img/hamburger1.png" alt="hamburger menu">
             <div class="flex column nav-info-container">
                 <nav>
@@ -122,57 +117,65 @@
             </section>
             <div class="divisor"></div>
             <section class="flex wrap info-section">
-                <div class="flex column info">
+                <div class="flex info">
                     <div class="flex info-img-container">
                         <img id="calendar1" src="../assets/img/calendar1.png" alt="Calendar">
                     </div>
-                    <p class="bold">
-                        Appointment booking
-                    </p>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
-                        Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
-                    </p>
+                    <div class="flex column info-text-container">
+                        <p class="bold">
+                            Appointment booking
+                        </p>
+                        <p class="none">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
+                            Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
+                        </p>
+                    </div>
                 </div>
-                <div class="flex column info">
+                <div class="flex info">
                     <div class="flex info-img-container">
                         <img id="calendar2" src="../assets/img/calendar2.png" alt="Calendar">
                     </div>
-                    <p class="bold">
-                        Calendar and opening hours
-                    </p>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
-                        Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
-                    </p>
+                    <div class="flex column info-text-container">
+                        <p class="bold">
+                            Calendar and opening hours
+                        </p>
+                        <p class="none">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
+                            Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
+                        </p>
+                    </div>
                 </div>
-                <div class="flex column info">
+                <div class="flex info">
                     <div class="flex info-img-container">
                         <img id="credit-cards" src="../assets/img/credit-cards.png" alt="Credit Cards">
                     </div>
-                    <p class="bold">
-                        Management and membership
-                    </p>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
-                        Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
-                    </p>
+                    <div class="flex column info-text-container">
+                        <p class="bold">
+                            Management and membership
+                        </p>
+                        <p class="none">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
+                            Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
+                        </p>
+                    </div>
                 </div>
-                <div class="flex column info">
+                <div class="flex info">
                     <div class="flex info-img-container">
                         <img id="notes" src="../assets/img/notes.png" alt="Notes">
                     </div>
-                    <p class="bold">
-                        Contact form and suggestions
-                    </p>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
-                        Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
-                    </p>
+                    <div class="flex column info-text-container">
+                        <p class="bold">
+                            Contact form and suggestions
+                        </p>
+                        <p class="none">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Placeat incidunt distinctio vero ducimus fugit blanditiis facilis culpa ea iure.
+                            Vel facere mollitia omnis nam impedit aspernatur, repellendus voluptate. Eaque, minima?
+                        </p>
+                    </div>
                 </div>
             </section>
             <div class="divisor"></div>
@@ -180,58 +183,48 @@
                 <h2>
                     Registration and/or claim
                 </h2>
-                <form>
-                    <div class="flex form-option">
-                        <label for="name">
-                            Name
-                        </label>
+                <form class="flex column">
+                    <label for="name">
+                        Name
+                    </label>
+                    <input id="name" type="text">
+                    <label for="lastname">
+                        Lastname
+                    </label>
+                    <input id="lastname" type="text">
+                    <label for="email">
+                        E-mail
+                    </label>
+                    <input id="email" type="email">
+                    <div class="radio-label-container">
+                        <div>
+                            <input id="memberships" type="radio" name="option">
+                            <label for="memberships">
+                                I want to know memberships and costs
+                            </label>
+                        </div>
+                        <div>
+                        <input id="question-suggestion" type="radio" name="option">
+                            <label for="question-suggestion">
+                                I want to make a question or suggestion
+                            </label>
+                        </div>
+                        <div>
+                            <input id="claim" type="radio" name="option">
+                            <label for="claim">
+                                I want to make a claim
+                            </label>
+                        </div>
                     </div>
-                    <div class="flex form-option">
-                        <input id="name" type="text">
-                    </div>
-                    <div class="flex form-option">
-                        <label for="lastname">
-                            Lastname
-                        </label>
-                    </div>
-                    <div  class="flex form-option">
-                        <input id="lastname" type="text">
-                    </div>
-                    <div class="flex form-option">
-                        <label for="email">
-                            E-mail
-                        </label>
-                    </div>
-                    <div class="flex form-option">
-                        <input id="email" type="email">
-                    </div>
-                    <div class="flex form-option">
-                        <input id="memberships" type="radio" name="option">
-                        <label for="memberships">
-                            I want to know memberships and costs
-                        </label>
-                    </div>
-                    <div class="flex form-option">
-                    <input id="question-suggestion" type="radio" name="option">
-                        <label for="question-suggestion">
-                            I want to make a question or suggestion
-                        </label>
-                    </div>
-                    <div class="flex form-option">
-                        <input id="claim" type="radio" name="option">
-                        <label for="claim">
-                            I want to make a claim
-                        </label>
-                    </div>
-                    <div class="flex form-option">
+                    <div>
                         <label for="comments">
                             Comments
                         </label>
                     </div>
-                    <div class="flex form-option">
+                    <div>
                         <textarea id="comments" name="Comments" cols="30" rows="10"></textarea>
                     </div>
-                    <div class="flex form-option">
+                    <div>
                         <input class="button" type="submit" value="Send">
                     </div>
                 </form>
