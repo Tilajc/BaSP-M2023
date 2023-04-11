@@ -13,18 +13,6 @@
     color: #423C3C;
 }
 
-@media screen and (min-width: 600px) {
-    #gym-img{
-        order: 1;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    #gym-img{
-        order: 0;
-    }
-}
-
 .info-section{
     text-align: center;
     justify-content: center;
@@ -74,19 +62,6 @@
     margin-bottom: 20px;
 }
 
-@media screen and (min-width: 1024px){
-    .info-container{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: 50%;
-    }
-
-    .info-text-container p{
-        display: inline-block;
-    }
-}
-
 input[type="text"], input[type="email"]{
     margin: auto;
     width: 260px;
@@ -117,6 +92,7 @@ input[type="submit"]{
 }
 
 #activities{
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
@@ -133,14 +109,6 @@ input[type="submit"]{
     width: 260px;
     height: 200px;
     object-fit: contain;
-}
-
-@media screen and (min-width:600px) {
-    .activity-img{
-        width: 260px;
-        height: 200px;
-        object-fit: cover;
-    }
 }
 
 .h3-container{
@@ -169,4 +137,42 @@ input[type="submit"]{
 
 .ul-container{
     text-align: left;
+}
+
+@media screen and (min-width: 600px) {
+    #gym-img{
+        order: 1;
+    }
+
+    .activity-img{
+        width: 260px;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    main{
+        margin-top: 14%;
+        margin-left: 25%;
+    }
+
+    #gym-img{
+        order: 0;
+    }
+
+    .info-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 50%;
+    }
+
+    section #activities{
+        justify-content: left;
+    }
+
+    .info-text-container p{
+        display: inline-block;
+    }
 }

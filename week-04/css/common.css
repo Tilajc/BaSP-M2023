@@ -7,13 +7,38 @@ p{
     font-weight: 500;
 }
 
+section{
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+h1{
+    margin: 20px;
+    max-width: 530px;
+    font-size: 3rem;
+    color: #373867;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: #373867;
+}
+
 header{
     display: none;
     width: 100vw;
     height: 14%;
     align-items: flex-end;
     background-color: #373867;
-    z-index: 2;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    margin: 30px 0;
 }
 
 header p{
@@ -23,9 +48,30 @@ header p{
 }
 
 aside{
+    display: none;
     width: 100%;
     height: 100%;
     background-color: #f6f6f6;
+}
+
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.divisor{
+    width: 70%;
+    max-width: 500px;
+    height: 5px;
+    margin: 100px auto;
+    background-color: #bebebe;
 }
 
 .button{
@@ -46,54 +92,6 @@ aside{
     text-transform: uppercase;
 }
 
-h2{
-    font-size: 2.5rem;
-    color: #373867;
-}
-
-a{
-    text-decoration: none;
-}
-
-section{
-    align-items: center;
-    text-align: center;
-    width: 100%;
-}
-
 .none{
     display: none;
-}
-
-h1{
-    margin: 20px;
-    max-width: 530px;
-    font-size: 3rem;
-    color: #373867;
-}
-
-li{
-    margin: 30px 0;
-}
-
-#RR-logo{
-    width: 13%;
-    max-width: 112px;
-    text-align: center;
-}
-
-@media screen and (min-width:600px) {
-    #RR-logo{
-        position: fixed;
-        bottom: 90px;
-        right: 20px;
-    }
-}
-
-.divisor{
-    width: 70%;
-    max-width: 500px;
-    height: 5px;
-    margin: 100px auto;
-    background-color: #bebebe;
 }

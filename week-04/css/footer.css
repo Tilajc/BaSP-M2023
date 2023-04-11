@@ -13,12 +13,6 @@ footer div{
     text-align: center;
 }
 
-@media only screen and (min-width: 600px){
-    .social-media-container{
-        width: 16.6%;
-    }
-}
-
 #footer-text{
     width: 100%;
     text-align: center;
@@ -26,4 +20,28 @@ footer div{
 
 #footer-text p{
     width: 100%;
+}
+
+#RR-logo{
+    width: 13%;
+    max-width: 112px;
+    text-align: center;
+}
+
+@media screen and (min-width:600px) {
+    .social-media-container{
+        width: 16.6%;
+    }
+
+    #RR-logo{
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    footer{
+        margin-left: 25%;
+    }
 }
