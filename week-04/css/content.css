@@ -84,11 +84,10 @@ input[type="submit"]{
     border-radius: 5px;
 }
 
-#about-us-p{
+.about-us{
     width: 80%;
     padding: 60px 30px;
     background-color: rgba(170, 206, 155, 0.1);
-    box-sizing: border-box;
 }
 
 #activities{
@@ -142,6 +141,10 @@ input[type="submit"]{
 @media screen and (min-width: 600px) {
     #gym-img{
         order: 1;
+    }
+
+    .about-us-h2{
+        background-color: #fff;
     }
 
     .activity-img{
