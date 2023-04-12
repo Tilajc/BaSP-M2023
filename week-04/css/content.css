@@ -107,7 +107,6 @@ input[type="submit"]{
 .activity-img{
     width: 260px;
     height: 200px;
-    object-fit: contain;
 }
 
 .h3-container{
@@ -147,9 +146,12 @@ input[type="submit"]{
         background-color: #fff;
     }
 
+    .activity-container{
+        width: 100%;
+    }
+
     .activity-img{
-        width: 260px;
-        height: 200px;
+        width: 70%;
         object-fit: cover;
     }
 }
@@ -177,5 +179,14 @@ input[type="submit"]{
 
     .info-text-container p{
         display: inline-block;
+    }
+
+    .activity-container{
+        display: inline-block;
+        width: 30%;
+    }
+
+    .activity-img{
+        width: 260px;
     }
 }
