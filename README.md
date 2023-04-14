@@ -36,6 +36,16 @@ During the four week I have been working with HTML, CSS, Git, and Github again. 
   https://tilajc.github.io/BaSP-M2023/week-04/index.html
 ```
 
+## Week-05
+
+During the fifth week I have been working with JavaScript, and fixed some errors from the fourth week. This time I did some exercises to print in the console.
+
+## Run Week-05 with github pages
+
+```bash
+  https://tilajc.github.io/BaSP-M2023/week-05/index.html
+```
+
 ## Run Locally
 
 ### Clone the project
