@@ -2,15 +2,15 @@
 
 console.log('05. For');
 
-/*a. Crear un array que contenga 5 empanadas y recorrer dicho array utilizando un
-bucle for de JavaScript para mostrar una alerta utilizando cada una de las empanadas.*/
+/*a. Crear un array que contenga 5 palabras y recorrer dicho array utilizando un
+bucle for de JavaScript para mostrar una alerta utilizando cada una de las palabras.*/
 
 console.log('05.a:');
 
 var empanadas = ['carne', 'verdura', 'pollo', 'jamon y Queso', '4 Quesos'];
 
-for(let i = 0; i<empanadas.length; i++){
-    console.log(empanadas[i]);
+for(var i = 0; i<empanadas.length; i++){
+    alert(empanadas[i]);
 }
 
 /*b. Al array anterior convertir la primera letra de cada palabra en mayúscula y
@@ -18,9 +18,9 @@ mostrar una alerta por cada palabra modificada.*/
 
 console.log('05.b:');
 
-for(let i = 0; i<empanadas.length; i++){
-    console.log('Se le ha dado la primera letra mayuscula a: ',
-    empanadas[i].substring(0,1).toUpperCase() + empanadas[i].substring(1,empanadas[i].length));
+for(var i = 0; i<empanadas.length; i++){
+    empanadas[i]=empanadas[i].substring(0,1).toUpperCase() + empanadas[i].substring(1,empanadas[i].length);
+    alert('Se le ha dado la primera letra mayuscula a: ' + empanadas[i]);
 }
 
 /*c. Crear una variable llamada “sentence” que tenga un string vacío, luego al array del
@@ -30,11 +30,11 @@ Al final mostrar una única alerta con la cadena completa.*/
 console.log('05.c:');
 
 var sentence = [];
-for(let i = 0; i<empanadas.length; i++){
+for(var i = 0; i<empanadas.length; i++){
     sentence.push(empanadas[i]);
 }
 
-console.log(sentence);
+alert(sentence);
 
 /*d. Crear un array vacío y con un bucle for de 10 repeticiones. Llenar el array con el número de la repetición,
 es decir que al final de la ejecución del bucle for debería haber 10 elementos dentro del array,
@@ -44,7 +44,7 @@ console.log('05.d:');
 
 var newArray = [];
 
-for(let i = 0; i<10; i++){
+for(var i = 0; i<10; i++){
     newArray[i]=i;
 }
 

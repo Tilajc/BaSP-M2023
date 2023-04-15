@@ -31,4 +31,5 @@ console.log('01.c:');
 var str4 = 'first string';
 var str5 = 'second string';
 var size = str4.length+str5.length;
+
 console.log(str4, str5, 'cantidad de letras', size);
