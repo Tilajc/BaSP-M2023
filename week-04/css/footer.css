@@ -23,8 +23,8 @@ footer div{
 }
 
 #RR-logo{
-    width: 13%;
-    max-width: 112px;
+    width: 10%;
+    max-width: 90px;
     text-align: center;
 }
 
@@ -42,6 +42,27 @@ footer div{
 
 @media screen and (min-width:1024px) {
     footer{
+        display: flex;
         margin-left: 25%;
+    }
+
+    footer div{
+        margin: 0;
+        width: 50%;
+    }
+
+    .social-media-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer div img{
+        width: 24px;
+    }
+
+    #footer-text{
+        width: 35%;
+        text-align: left;
     }
 }

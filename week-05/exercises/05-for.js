@@ -29,9 +29,9 @@ Al final mostrar una única alerta con la cadena completa.*/
 
 console.log('-Exercise 05.c:');
 
-var sentence = [];
+var sentence = '';
 for(var i = 0; i<empanadas.length; i++){
-    sentence.push(empanadas[i]);
+    sentence = sentence + empanadas[i];
 }
 
 alert(sentence);

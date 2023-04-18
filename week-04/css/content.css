@@ -63,7 +63,7 @@
 }
 
 input[type="text"], input[type="email"]{
-    margin: auto;
+    margin: 15px auto;
     width: 260px;
     background-color: #D9D9D9;
 }
@@ -75,6 +75,7 @@ textarea{
 }
 
 .radio-label-container{
+    margin: 20px 0;
     text-align: left;
 }
 
@@ -87,6 +88,7 @@ input[type="submit"]{
 .about-us{
     width: 80%;
     padding: 60px 30px;
+    line-height: 30px;
     background-color: rgba(170, 206, 155, 0.1);
 }
 
@@ -97,8 +99,9 @@ input[type="submit"]{
 }
 
 .activity-container{
-    display: inline-block;
-    width: 30%;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
     min-width: 260px;
     margin: 25px 13px;
     height: 230px;
@@ -107,6 +110,7 @@ input[type="submit"]{
 .activity-img{
     width: 260px;
     height: 200px;
+    border-radius: 5px;
 }
 
 .h3-container{
@@ -146,8 +150,14 @@ input[type="submit"]{
         background-color: #fff;
     }
 
+    .info{
+        width: 70%;
+    }
+
+
     .activity-container{
-        width: 100%;
+        flex-direction: column;
+        width: 65%;
     }
 
     .activity-img{
@@ -166,11 +176,10 @@ input[type="submit"]{
         order: 0;
     }
 
-    .info-container{
+    .info{
+        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: 50%;
+        width: 45%;
     }
 
     section #activities{

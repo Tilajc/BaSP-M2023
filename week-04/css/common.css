@@ -33,6 +33,10 @@ header{
     background-color: #373867;
 }
 
+label{
+    margin: 15px 0;
+}
+
 a{
     text-decoration: none;
 }
