@@ -1,0 +1,27 @@
+header{
+    display: flex;
+    position: inherit;
+}
+
+.rememer-forgot{
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-width: 280px;
+    height: 30px;
+}
+
+#in-form{
+    width: 60%;
+    min-width: 280px;
+    max-width: 640px;
+    height: 80vh;
+    min-height: 350px;
+}
+
+#in-form input[type="email"], #in-form input[type="password"]{
+    width: 50%;
+    min-width: 170px;
+    width: 260px;
+    height: 40px;
+}

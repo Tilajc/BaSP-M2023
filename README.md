@@ -46,6 +46,16 @@ During the fifth week I have been working with JavaScript, and fixed some errors
   https://tilajc.github.io/BaSP-M2023/week-05/index.html
 ```
 
+## Week-06
+
+During the sixth week I have been working with HTML, CSS, Git, Github, and javascript again. This time I did the login, and sign up form, and validate the input values for every input type.
+
+## Run Week-06 with github pages
+
+```bash
+  https://tilajc.github.io/BaSP-M2023/week-06/index.html
+```
+
 ## Run Locally
 
 ### Clone the project
