@@ -9,9 +9,10 @@ nav{
 }
 
 #search-container{
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 90%;
+    max-width: 450px;
     height: 36px;
     margin: auto;
     border-style: solid;
@@ -101,8 +102,12 @@ aside div a{
         width: 25%;
     }
 
+    #search-container{
+        max-width: 300px;
+    }
+
     .hamburger-menu-main{
-        display: inline;
+        display: none;
     }
 
     .hamburger-menu-aside{

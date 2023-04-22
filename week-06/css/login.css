@@ -1,5 +1,4 @@
 header{
-    display: flex;
     position: inherit;
 }
 
@@ -15,7 +14,7 @@ header{
     width: 60%;
     min-width: 280px;
     max-width: 640px;
-    height: 80vh;
+    height: 55vh;
     min-height: 350px;
 }
 

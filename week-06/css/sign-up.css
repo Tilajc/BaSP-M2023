@@ -1,6 +1,6 @@
 header{
     position: inherit;
-    display: flex;
+    width: 100%;
 }
 
 #RR-logo{
@@ -28,20 +28,22 @@ header{
     font-size: 20px;
     width: 100%;
     height: 40px;
+    margin: 15px 0;
+}
+
+#up-form input[type= submit]{
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
 }
 
 #login-button{
-    width: 100%;
-    height: 100%;
+    margin-bottom: 15px;
+    padding: 12px 40px;
     border: none;
     background-color: #f4f4f4;
     border-radius: 5px;
-}
-
-#up-form a{
-    width: 120px;
-    height: 40px;
-    margin: 15px;
+    color: #000;
 }
 
 @media screen and (min-width: 1024px){
