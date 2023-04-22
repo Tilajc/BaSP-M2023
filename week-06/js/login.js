@@ -2,13 +2,30 @@ window.onload = function(){
 
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     var emailInput = document.getElementById('email');
-    console.log('email input tiene: ', emailInput);
-    emailInput.addEventListener('blur', function(event){
-        console.log('blur', event.target.value)
-        if (!emailExpression.test(event.target.value)){
-            alert('The email is wrong');
+    var errorE = document.querySelector('.error');
+
+    function validateEmail(email){
+    if (emailExpression.test(email)){
+            return true;
         }
-    })
+        return false;
+    }
+
+    emailExpression.test
+
+    emailInput.addEventListener('blur', function(event){
+        console.log('blur', event.target.value);
+        if (!validateEmail(event.target.value)){
+            alert('The email is wrong');
+            emailInput.classList.add('red-border');
+            errorE.classList.remove('none');
+        }
+    });
+
+    emailInput.addEventListener('focus', function(){
+        emailInput.classList.remove('red-border');
+        errorE.classList.add('none');
+    });
 
     function isUpLetter(c){
         for (i=65; i<=90; i++){
@@ -44,37 +61,57 @@ window.onload = function(){
         return false;
     }
 
-    var passwordInput = document.querySelector('input[type="password"]');
-
-    passwordInput.onblur=function(event){
-        if ((event.target.value.length>=8) && (event.target.value.length<=20)){
+    function validatePassword(password){
+        if ((password.length>=8) && (password.length<=20)){
             var lowLetter=false;
             var upLetter=false;
             var specialCharacter=false;
             var number=false;
             var cont=0;
-            while((cont<event.target.value.length) && (lowLetter==false || upLetter==false || specialCharacter==false || number==false)){
-                console.log('el while se itero: ', cont, ' veces');
-                if(isLowLetter(event.target.value[cont])){
+            while((cont<password.length) && (lowLetter==false ||
+                 upLetter==false || specialCharacter==false || number==false)){
+                if(isLowLetter(password[cont])){
                     lowLetter=true;
-                }else if(isUpLetter(event.target.value[cont])){
+                }else if(isUpLetter(password[cont])){
                     upLetter=true;
-                }else if(isSpecialCharacter(event.target.value[cont])){
+                }else if(isSpecialCharacter(password[cont])){
                     specialCharacter=true;
-                }else if(isNumber(event.target.value[cont])){
+                }else if(isNumber(password[cont])){
                     number=true;
                 }
                 cont++;
             }
-            console.log('Tiene caracter lower?', lowLetter);
-            console.log('Tiene caracter upper?', upLetter);
-            console.log('Tiene caracter especial?', specialCharacter);
-            console.log('Tiene caracter number?', number);
-            if((lowLetter==false || upLetter==false || specialCharacter==false || number==false)){
-                alert('The password is wrong');
+            if(!(lowLetter==false || upLetter==false || specialCharacter==false || number==false)){
+                return true;
             }
-        }else{
-            alert('The password is wrong');
+            return false;
         }
+        return false;
     }
+    var passwordInput = document.querySelector('input[type="password"]');
+    var errorP = document.getElementsByTagName('p');
+    passwordInput.addEventListener('blur', function(event){
+        console.log('blur', event.target.value);
+        if(!validatePassword(event.target.value)){
+            alert('The password is wrong');
+            passwordInput.classList.add('red-border');
+            errorP[2].classList.remove('none');
+        }
+    });
+
+    passwordInput.addEventListener('focus', function(event){
+        passwordInput.classList.remove('red-border');
+        errorP[2].classList.add('none');
+    });
+
+    var submitButton=document.querySelector('input[type="submit"]');
+
+    submitButton.addEventListener('click', function(event){
+        if ((validateEmail(emailInput.value)) && (validatePassword(passwordInput.value))){
+            event.preventDefault();
+            alert('Email: ' + emailInput.value + ' Password: ' + passwordInput.value);
+        } else{
+            alert('Filled with valid information');
+        }
+    });
 }

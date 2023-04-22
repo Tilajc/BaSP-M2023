@@ -143,6 +143,13 @@ input[type="submit"]{
 }
 
 .red-border{
-    border-color: red;
-    border-width: 5px;
+    border-color: #f13312;
+}
+
+.error{
+    color: #f13312;
+}
+
+.in-up-form .none{
+    display: none;
 }
