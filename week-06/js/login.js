@@ -106,7 +106,7 @@ window.onload = function(){
     submitButton.addEventListener('click', function(event){
         if ((validateEmail(emailInput.value)) && (validatePassword(passwordInput.value))){
             event.preventDefault();
-            alert('Email: ' + emailInput.value + ' Password: ' + passwordInput.value);
+            alert('Email: ' + emailInput.value + '\nPassword: ' + passwordInput.value);
         } else{
             alert('Fill using valid information');
         }

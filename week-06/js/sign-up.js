@@ -95,10 +95,10 @@ window.onload = function(){
         return verifier;
     }
 
-    function validateDNI(dni){
-        if(dni.length>7){
-            for (var i=0; i<dni.length; i++){
-                if((!isNumber(dni[i]))){
+    function validateID(id){
+        if(id.length>7){
+            for (var i=0; i<id.length; i++){
+                if((!isNumber(id[i]))){
                     return false;
                 }
             }
@@ -169,36 +169,34 @@ window.onload = function(){
         }
     }
 
-    var emailInput = document.getElementById('email');
+    function confirmPassword(p1,p2){
+        if(p1===p2){
+            return true;
+        }
+        return false;
+    }
+
+    function validateBirthDate(d){
+        var birthDate = new Date(d);
+        var currentDate = new Date();
+        var diference = currentDate.getTime()-birthDate.getTime();
+        var age = Math.floor(diference/(1000*60*60*24*365));
+        console.log(age);
+        if(age>=12){
+            return true;
+        }
+        return false;
+    }
+
+    function validateAll(name, lastname, id, birthDate, phoneNumber,
+        address, zipCode, Locality, email, password, cPassword){
+        if(validateNames(name) && validateNames(lastname) && validateID(id) && validateBirthDate(birthDate) && validatePhoneNumber(phoneNumber) && validateAddress(address) && validateZip(zipCode) && validateLocality(Locality) && validateEmail(email) && validatePassword(password) && confirmPassword(password, cPassword)){
+            return true;
+        }
+        return false;
+    }
+
     var errorMessage = document.getElementsByClassName('error');
-
-    emailInput.addEventListener('blur', function(event){
-        if(!validateEmail(event.target.value)){
-            emailInput.classList.add('red-border');
-            errorMessage[8].classList.remove('none');
-        }
-    })
-
-    emailInput.addEventListener('focus', function(){
-        emailInput.classList.remove('red-border');
-        errorMessage[8].classList.add('none');
-    })
-
-    var passwordInput = document.getElementById('password');
-
-    passwordInput.addEventListener('blur', function(event){
-        if(!validatePassword(event.target.value)){
-            passwordInput.classList.add('red-border');
-            errorMessage[9].classList.remove('none');
-        }
-    })
-
-    passwordInput.addEventListener('focus', function(event){
-        if(!validatePassword(event.target.value)){
-            passwordInput.classList.remove('red-border');
-            errorMessage[9].classList.add('none');
-        }
-    })
 
     var inputName = document.getElementById('name');
 
@@ -230,20 +228,34 @@ window.onload = function(){
         }
     })
 
-    var inputDNI = document.getElementById('dni');
+    var inputID = document.getElementById('id');
 
-    inputDNI.addEventListener('blur', function(event){
-        if(!validateDNI(event.target.value)){
-            inputDNI.classList.add('red-border');
+    inputID.addEventListener('blur', function(event){
+        if(!validateID(event.target.value)){
+            inputID.classList.add('red-border');
             errorMessage[2].classList.remove('none');
         }
     })
 
-    inputDNI.addEventListener('focus', function(event){
-        if(!validateDNI(event.target.value)){
-            inputDNI.classList.remove('red-border');
+    inputID.addEventListener('focus', function(event){
+        if(!validateID(event.target.value)){
+            inputID.classList.remove('red-border');
             errorMessage[2].classList.add('none');
         }
+    })
+
+    var inputBirthDate = document.getElementById('birth-date');
+
+    inputBirthDate.addEventListener('blur', function(event){
+        if(!validateBirthDate(event.target.value)){
+            inputBirthDate.classList.add('red-border');
+            errorMessage[3].classList.remove('none');
+        }
+    })
+
+    inputBirthDate.addEventListener('focus', function(){
+            inputBirthDate.classList.remove('red-border');
+            errorMessage[3].classList.add('none');
     })
 
     var inputPhoneNumber = document.getElementById('phone-number');
@@ -301,4 +313,71 @@ window.onload = function(){
         inputLocality.classList.remove('red-border');
         errorMessage[7].classList.add('none');
     })
+
+    var inputEmail = document.getElementById('email');
+
+    inputEmail.addEventListener('blur', function(event){
+        if(!validateEmail(event.target.value)){
+            inputEmail.classList.add('red-border');
+            errorMessage[8].classList.remove('none');
+        }
+    })
+
+    inputEmail.addEventListener('focus', function(){
+        inputEmail.classList.remove('red-border');
+        errorMessage[8].classList.add('none');
+    })
+
+    var inputPassword = document.getElementById('password');
+
+    inputPassword.addEventListener('blur', function(event){
+        if(!validatePassword(event.target.value)){
+            inputPassword.classList.add('red-border');
+            errorMessage[9].classList.remove('none');
+        }
+    })
+
+    inputPassword.addEventListener('focus', function(){
+        inputPassword.classList.remove('red-border');
+        errorMessage[9].classList.add('none');
+    })
+
+    var inputCPassword = document.getElementById('confirm-password');
+
+    inputCPassword.addEventListener('blur', function(event){
+        if(!confirmPassword(event.target.value, inputPassword.value)){
+            inputCPassword.classList.add('red-border');
+            errorMessage[10].classList.remove('none');
+        }
+    })
+
+    inputCPassword.addEventListener('focus', function(){
+        inputCPassword.classList.remove('red-border');
+        errorMessage[10].classList.add('none');
+    })
+
+    var submitButton=document.querySelector('input[type="submit"]');
+
+    submitButton.addEventListener('click', function(event){
+        event.preventDefault();
+        if (validateAll(inputName.value, inputLastname.value, inputID.value,
+            inputBirthDate.value, inputPhoneNumber.value, inputAddress.value,
+            inputZip.value, inputLocality.value, inputEmail.value,
+            inputPassword.value, inputCPassword.value)){
+            alert('Name: ' + inputName.value +
+            '\nLastname: ' + inputLastname.value +
+            '\nID: ' + inputID.value +
+            '\nBirth date: ' + inputBirthDate.value +
+            '\nPhone number: ' + inputPhoneNumber.value +
+            '\nAddress: ' + inputAddress.value +
+            '\nZip code: ' + inputZip.value +
+            '\nLocality: ' + inputLocality.value +
+            '\nEmail: ' + inputEmail.value +
+            '\nPassword: ' + inputPassword.value +
+            '\nConfirm password: ' + inputCPassword.value
+            );
+        } else{
+            alert('Fill using valid information');
+        }
+    });
 }
