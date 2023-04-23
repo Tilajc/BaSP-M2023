@@ -25,7 +25,7 @@ window.onload = function(){
     });
 
     function isUpLetter(c){
-        for (i=65; i<=90; i++){
+        for (var i=65; i<=90; i++){
             if (c.charCodeAt(0) == i){
                 return true;
             }
@@ -34,7 +34,7 @@ window.onload = function(){
     }
 
     function isLowLetter(c){
-        for (i=97; i<=122; i++){
+        for (var i=97; i<=122; i++){
             if (c.charCodeAt(0) == i){
                 return true;
             }
@@ -43,7 +43,7 @@ window.onload = function(){
     }
 
     function isNumber(c){
-        for (i=0; i<10; i++){
+        for (var i=0; i<10; i++){
             if (c == i){
                 return true;
             }
