@@ -11,12 +11,9 @@ window.onload = function(){
         return false;
     }
 
-    emailExpression.test
-
     emailInput.addEventListener('blur', function(event){
         console.log('blur', event.target.value);
         if (!validateEmail(event.target.value)){
-            alert('The email is wrong');
             emailInput.classList.add('red-border');
             errorE.classList.remove('none');
         }
@@ -88,12 +85,12 @@ window.onload = function(){
         }
         return false;
     }
+
     var passwordInput = document.querySelector('input[type="password"]');
     var errorP = document.getElementsByTagName('p');
     passwordInput.addEventListener('blur', function(event){
         console.log('blur', event.target.value);
         if(!validatePassword(event.target.value)){
-            alert('The password is wrong');
             passwordInput.classList.add('red-border');
             errorP[2].classList.remove('none');
         }
@@ -111,7 +108,7 @@ window.onload = function(){
             event.preventDefault();
             alert('Email: ' + emailInput.value + ' Password: ' + passwordInput.value);
         } else{
-            alert('Filled with valid information');
+            alert('Fill using valid information');
         }
     });
 }
