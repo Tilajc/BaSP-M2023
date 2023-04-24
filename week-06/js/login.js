@@ -86,8 +86,23 @@ window.onload = function(){
         return false;
     }
 
+    function validateAllInformation(email, password){
+            var array = [];
+            if(!validateEmail(email)){
+                array.push('The field Email is wrong ' + email);
+            }
+            if(!validatePassword(password)){
+                array.push('\nThe field Password is wrong ' + password);
+            }
+
+            return array;
+        }
+
+        console.log(validateAllInformation('email', 'password'))
+
     var passwordInput = document.querySelector('input[type="password"]');
     var errorP = document.getElementsByTagName('p');
+
     passwordInput.addEventListener('blur', function(event){
         console.log('blur', event.target.value);
         if(!validatePassword(event.target.value)){
@@ -104,11 +119,11 @@ window.onload = function(){
     var submitButton=document.querySelector('input[type="submit"]');
 
     submitButton.addEventListener('click', function(event){
+        event.preventDefault();
         if ((validateEmail(emailInput.value)) && (validatePassword(passwordInput.value))){
-            event.preventDefault();
             alert('Email: ' + emailInput.value + '\nPassword: ' + passwordInput.value);
         } else{
-            alert('Fill using valid information');
+            alert(validateAllInformation(emailInput.value, passwordInput.value));
         }
     });
 }
