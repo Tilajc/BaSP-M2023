@@ -118,6 +118,11 @@ window.onload = function(){
             var verifier=true;
             var cont=0;
             while((cont<a.length) && (verifier==true)){
+                if(cont==0){
+                    if(!(isUpLetter(a[cont]) || isLowLetter(a[cont] || isNumber(a[cont])))){
+                        return false;
+                    }
+                }
                 if((isUpLetter(a[cont]) || (isLowLetter(a[cont])))){
                     letterVerifier=true;
                 } else if(isNumber(a[cont])){
@@ -149,15 +154,24 @@ window.onload = function(){
         }
     }
 
-    function validateLocality(l){
+    function validateCity(l){
+        var cont=0;
         if(l.length>3){
             for (var i=0; i<l.length; i++){
                 if(!(isNumber(l[i]) || isLowLetter(l[i]) || isUpLetter(l[i]) || (l[i]==' '))){
                     return false;
+                } else {
+                    if(isLowLetter(l[i]) || isUpLetter(l[i])){
+                        cont++;
                 }
             }
-            return true;
+            }
+            if(cont>=3){
+                return true;
+            }
+            return false;
         }
+        return false;
     }
 
     function confirmPassword(p1,p2){
@@ -179,10 +193,10 @@ window.onload = function(){
     }
 
     function validateAll(name, lastName, id, birthDate, phoneNumber,
-        address, zipCode, locality, email, password, cPassword){
+        address, zipCode, city, email, password, cPassword){
         if(validateNames(name) && validateNames(lastName) && validateID(id) &&
         validateBirthDate(birthDate) && validatePhoneNumber(phoneNumber) && validateAddress(address) &&
-        validateZip(zipCode) && validateLocality(locality) && validateEmail(email) &&
+        validateZip(zipCode) && validateCity(city) && validateEmail(email) &&
         validatePassword(password) && confirmPassword(password, cPassword)){
             return true;
         }
@@ -190,7 +204,7 @@ window.onload = function(){
     }
 
     function validateAllInformation(name, lastName, id, birthDate, phoneNumber,
-        address, zipCode, locality, email, password, cPassword){
+        address, zipCode, city, email, password, cPassword){
             var array = [];
             if(!validateNames(name)){
                 array.push('Invalid Name: "' + name + '"');
@@ -213,8 +227,8 @@ window.onload = function(){
             if(!validateZip(zipCode)){
                 array.push('\nInvalid Zip Code "' + zipCode + '"');
             }
-            if(!validateLocality(locality)){
-                array.push('\nInvalid Locality "' + locality + '"');
+            if(!validateCity(city)){
+                array.push('\nInvalid City "' + city + '"');
             }
             if(!validateEmail(email)){
                 array.push('\nInvalid Email "' + email + '"');
@@ -225,7 +239,6 @@ window.onload = function(){
             if(!confirmPassword(cPassword)){
                 array.push('\nInvalid Confirm Password "' + cPassword + '"');
             }
-
             return array;
         }
 
@@ -333,17 +346,17 @@ window.onload = function(){
         errorMessage[6].classList.add('none');
     });
 
-    var inputLocality = document.getElementById('locality');
+    var inputCity = document.getElementById('city');
 
-    inputLocality.addEventListener('blur', function(event){
-        if(!validateLocality(event.target.value)){
-            inputLocality.classList.add('red-border');
+    inputCity.addEventListener('blur', function(event){
+        if(!validateCity(event.target.value)){
+            inputCity.classList.add('red-border');
             errorMessage[7].classList.remove('none');
         }
     });
 
-    inputLocality.addEventListener('focus', function(){
-        inputLocality.classList.remove('red-border');
+    inputCity.addEventListener('focus', function(){
+        inputCity.classList.remove('red-border');
         errorMessage[7].classList.add('none');
     });
 
@@ -395,7 +408,7 @@ window.onload = function(){
         event.preventDefault();
         if (validateAll(inputName.value, inputLastName.value, inputID.value,
             inputBirthDate.value, inputPhoneNumber.value, inputAddress.value,
-            inputZip.value, inputLocality.value, inputEmail.value,
+            inputZip.value, inputCity.value, inputEmail.value,
             inputPassword.value, inputCPassword.value)){
             alert('Name: ' + inputName.value +
             '\nLast name: ' + inputLastName.value +
@@ -404,7 +417,7 @@ window.onload = function(){
             '\nPhone number: ' + inputPhoneNumber.value +
             '\nAddress: ' + inputAddress.value +
             '\nZip code: ' + inputZip.value +
-            '\nLocality: ' + inputLocality.value +
+            '\nCity: ' + inputCity.value +
             '\nEmail: ' + inputEmail.value +
             '\nPassword: ' + inputPassword.value +
             '\nConfirm password: ' + inputCPassword.value
@@ -412,7 +425,7 @@ window.onload = function(){
         } else{
             alert(validateAllInformation(inputName.value, inputLastName.value, inputID.value,
             inputBirthDate.value, inputPhoneNumber.value, inputAddress.value,
-            inputZip.value, inputLocality.value, inputEmail.value,
+            inputZip.value, inputCity.value, inputEmail.value,
             inputPassword.value, inputCPassword.value));
         }});
 }

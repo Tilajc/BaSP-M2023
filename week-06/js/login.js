@@ -111,7 +111,7 @@ window.onload = function(){
         }
     });
 
-    passwordInput.addEventListener('focus', function(event){
+    passwordInput.addEventListener('focus', function(){
         passwordInput.classList.remove('red-border');
         errorP[2].classList.add('none');
     });
