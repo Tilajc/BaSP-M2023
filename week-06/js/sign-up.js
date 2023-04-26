@@ -427,5 +427,6 @@ window.onload = function(){
             inputBirthDate.value, inputPhoneNumber.value, inputAddress.value,
             inputZip.value, inputCity.value, inputEmail.value,
             inputPassword.value, inputCPassword.value));
-        }});
+        }
+    });
 }

@@ -18,6 +18,15 @@ window.onload = function(){
         return false;
     }
 
+    function isNumber(c){
+        for (var i=0; i<10; i++){
+            if (c == i){
+                return true;
+            }
+        }
+        return false;
+    }
+
     function validateNames(n){
         if(n.length>3 && n.length<=30){
             var verifier=true;
@@ -41,6 +50,42 @@ window.onload = function(){
             }
         return false;
     }
+
+    function validateComment(comment){
+        if(comment.length>=3){
+            for(var i=0; i<comment.length; i++){
+                if(!(isLowLetter(comment[i]) || isUpLetter(comment[i]) || isNumber(comment[i]))){
+                    return false;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+
+    function validateAll(name, lastName, email, comment){
+        if(validateNames(name) && validateNames(lastName) && validateEmail(email) && validateComment(comment)){
+            return true;
+        }
+        return false;
+    }
+
+    function validateAllInformation(name, lastName, email, comment){
+            var array = [];
+            if(!validateNames(name)){
+                array.push('Invalid Name: "' + name + '"');
+            }
+            if(!validateNames(lastName)){
+                array.push('\nInvalid Last name: "' + lastName + '"');
+            }
+            if(!validateEmail(email)){
+                array.push('\nInvalid Email "' + email + '"');
+            }
+            if(!validateComment(comment)){
+                array.push('\nInvalid comment "' + comment + '"');
+            }
+            return array;
+        }
 
     var errorMessage = document.getElementsByClassName('error');
 
@@ -86,5 +131,39 @@ window.onload = function(){
     inputEmail.addEventListener('focus', function(){
         inputEmail.classList.remove('red-border');
         errorMessage[2].classList.add('none');
+    });
+
+    var inputOption = document.getElementById('options');
+
+    console.log(inputOption);
+
+
+    var inputComment = document.getElementById('comments');
+
+    inputComment.addEventListener('blur', function(event){
+        if(!validateComment(event.target.value)){
+            inputComment.classList.add('red-border');
+            errorMessage[3].classList.remove('none');
+        }
+    })
+
+    inputComment.addEventListener('focus', function(){
+            inputComment.classList.remove('red-border');
+            errorMessage[3].classList.add('none');
+    })
+
+    var submitButton=document.querySelector('input[type="submit"]');
+
+    submitButton.addEventListener('click', function(event){
+        event.preventDefault();
+        if (validateAll(inputName.value, inputLastName.value, inputEmail.value, inputComment.value)){
+            alert('Name: ' + inputName.value +
+            '\nLast name: ' + inputLastName.value +
+            '\nEmail: ' + inputEmail.value +
+            '\nComment: ' + inputComment.value
+            );
+        } else{
+            alert(validateAllInformation(inputName.value, inputLastName.value, inputEmail.value, inputComment.value));
+        }
     });
 }

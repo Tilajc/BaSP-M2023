@@ -68,6 +68,12 @@ input[type="text"], input[type="email"]{
     background-color: #D9D9D9;
 }
 
+#options{
+    height: 30px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+
 textarea{
     width: 364px;
     height: 137px;
