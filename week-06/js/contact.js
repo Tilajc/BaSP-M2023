@@ -63,14 +63,14 @@ window.onload = function(){
         return false;
     }
 
-    function validateAll(name, lastName, email, comment){
-        if(validateNames(name) && validateNames(lastName) && validateEmail(email) && validateComment(comment)){
+    function validateAll(name, lastName, email, o1, o2, comment){
+        if(validateNames(name) && validateNames(lastName) && validateEmail(email) && validateOption(o1,o2) && validateComment(comment)){
             return true;
         }
         return false;
     }
 
-    function validateAllInformation(name, lastName, email, comment){
+    function validateAllInformation(name, lastName, email, o1, o2, comment){
             var array = [];
             if(!validateNames(name)){
                 array.push('Invalid Name: "' + name + '"');
@@ -81,11 +81,23 @@ window.onload = function(){
             if(!validateEmail(email)){
                 array.push('\nInvalid Email "' + email + '"');
             }
+            if(!validateOption(o1, o2)){
+                array.push('\nInvalid Option "' + o1 + '"');
+            }
             if(!validateComment(comment)){
                 array.push('\nInvalid comment "' + comment + '"');
             }
             return array;
         }
+
+    function validateOption(o1,o2){
+        if(o1 != o2){
+            return true;
+        }
+        return false;
+    }
+
+    console.log(validateOption('holi', 'holi'));
 
     var errorMessage = document.getElementsByClassName('error');
 
@@ -134,36 +146,47 @@ window.onload = function(){
     });
 
     var inputOption = document.getElementById('options');
+    var invalidOption = document.getElementsByTagName('option');
 
-    console.log(inputOption);
+    inputOption.addEventListener('blur', function(event){
+        if((!validateOption(event.target.value, invalidOption[0].value))){
+            inputOption.classList.add('red-border');
+            errorMessage[3].classList.remove('none');
+        }
+    })
 
+    inputOption.addEventListener('focus', function(){
+            inputOption.classList.remove('red-border');
+            errorMessage[3].classList.add('none');
+    })
 
     var inputComment = document.getElementById('comments');
 
     inputComment.addEventListener('blur', function(event){
         if(!validateComment(event.target.value)){
             inputComment.classList.add('red-border');
-            errorMessage[3].classList.remove('none');
+            errorMessage[4].classList.remove('none');
         }
     })
 
     inputComment.addEventListener('focus', function(){
             inputComment.classList.remove('red-border');
-            errorMessage[3].classList.add('none');
+            errorMessage[4].classList.add('none');
     })
 
     var submitButton=document.querySelector('input[type="submit"]');
 
     submitButton.addEventListener('click', function(event){
         event.preventDefault();
-        if (validateAll(inputName.value, inputLastName.value, inputEmail.value, inputComment.value)){
+        if (validateAll(inputName.value, inputLastName.value, inputEmail.value, inputOption.value, invalidOption[0].value ,inputComment.value)){
             alert('Name: ' + inputName.value +
             '\nLast name: ' + inputLastName.value +
             '\nEmail: ' + inputEmail.value +
+            '\nOption: ' + inputOption.value +
             '\nComment: ' + inputComment.value
             );
         } else{
-            alert(validateAllInformation(inputName.value, inputLastName.value, inputEmail.value, inputComment.value));
+            alert(validateAllInformation(inputName.value, inputLastName.value, inputEmail.value, inputOption.value, invalidOption[0].value , inputComment.value));
         }
     });
 }
