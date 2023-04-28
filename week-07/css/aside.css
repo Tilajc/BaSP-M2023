@@ -1,0 +1,116 @@
+.hamburger-menu{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+nav{
+    width: 100%;
+}
+
+#search-container{
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 450px;
+    height: 36px;
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.nav-info-container{
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.search{
+    width: 255px;
+    height: 36px;
+    border: none;
+}
+
+.button-container{
+    justify-content: space-around;
+    align-items: center;
+    height: 49px;
+    margin-top: 10px;
+}
+
+aside div a{
+    width: 65%;
+}
+
+.nav-button{
+    width: 100%;
+    height: 49px;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.icon1{
+    width: 44px;
+    height: 39px;
+}
+
+.icon3{
+    width: 44px;
+    height: 29px;
+}
+
+.information{
+    width: 100%;
+}
+
+#information-t{
+    align-self: center;
+}
+
+.information-container{
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.information-container div, .information-container p{
+    width: 71%;
+}
+
+#house{
+    align-self: flex-start;
+}
+
+.icon2{
+    width: 33px;
+    height: 33px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    aside{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 14%;
+        left: 0;
+        height: 86%;
+        width: 25%;
+    }
+
+    #search-container{
+        max-width: 300px;
+    }
+
+    .hamburger-menu-main{
+        display: none;
+    }
+
+    .hamburger-menu-aside{
+        display: none;
+    }
+}

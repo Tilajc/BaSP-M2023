@@ -56,6 +56,16 @@ During the sixth week I have been working with HTML, CSS, Git, Github, and javas
   https://tilajc.github.io/BaSP-M2023/week-06/views/index.html
 ```
 
+## Week-07
+
+During the seventh week I have been working with Git, Github, and javascript. This time I added an API verification into the login form, where the valid email is "rose@radiumrocket.com", and the valid password is "BaSProfessional1". And in signup if you fill the fields with valid information that's will fill the local storage, and when you left the page and enter again you will have the form completed with this data.
+
+## Run Week-07 with github pages
+
+```bash
+  https://tilajc.github.io/BaSP-M2023/week-07/views/index.html
+```
+
 ## Run Locally
 
 ### Clone the project

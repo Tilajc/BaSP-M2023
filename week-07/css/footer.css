@@ -1,0 +1,68 @@
+footer{
+    text-align: center;
+}
+
+footer div{
+    text-align: center;
+}
+
+.social-media-container{
+    height: 50px;
+    width: 33.3%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#footer-text{
+    width: 100%;
+    text-align: center;
+}
+
+#footer-text p{
+    width: 100%;
+}
+
+#RR-logo{
+    width: 10%;
+    max-width: 90px;
+    text-align: center;
+}
+
+@media screen and (min-width:600px) {
+    .social-media-container{
+        width: 16.6%;
+    }
+
+    #RR-logo{
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    footer{
+        display: flex;
+        margin-left: 25%;
+    }
+
+    footer div{
+        margin: 0;
+        width: 50%;
+    }
+
+    .social-media-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer div img{
+        width: 24px;
+    }
+
+    #footer-text{
+        width: 35%;
+        text-align: left;
+    }
+}

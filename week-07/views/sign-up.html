@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/sign-up.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../js/sign-up.js"></script>
+    <title>MegaRocket SA Login</title>
+  </head>
+  <body>
+    <header>
+      <p>Mega Rocket SA</p>
+    </header>
+    <main class="flex column">
+      <a id="back" href="./index.html"
+        ><img src="../../assets/img/Back.png" alt="back"
+      /></a>
+      <h1 class="form-title">Register</h1>
+      <img
+        id="RR-logo"
+        src="../../assets/img/gym-Logo.png"
+        alt="Logo Mega Rocket SA"
+      />
+      <form id="up-form" class="in-up-form flex column">
+        <div class="flex two-label-input-container">
+          <div class="flex column one-label-input-container">
+            <label for="name">Name</label>
+            <input id="name" type="text" />
+            <p class="error none">The field Name has an error</p>
+          </div>
+          <div class="flex column one-label-input-container">
+            <label for="last-name">Last name</label>
+            <input id="last-name" type="text" />
+            <p class="error none">The field Last name has an error</p>
+          </div>
+        </div>
+        <div class="flex two-label-input-container">
+          <div class="flex column one-label-input-container">
+            <label for="id">ID</label>
+            <input id="id" type="text" />
+            <p class="error none">The field ID has an error</p>
+          </div>
+          <div class="flex column one-label-input-container">
+            <label for="birth-date">Birth date</label>
+            <input id="birth-date" type="date" />
+            <p class="error none">The field Birth date has an error</p>
+          </div>
+        </div>
+        <div class="flex two-label-input-container">
+          <div class="flex column one-label-input-container">
+            <label for="phone-number">Phone Number</label>
+            <input id="phone-number" type="text" />
+            <p class="error none">The field Phone number has an error</p>
+          </div>
+          <div class="flex column one-label-input-container">
+            <label for="address">address</label>
+            <input id="address" type="text" />
+            <p class="error none">The field Address has an error</p>
+          </div>
+        </div>
+        <div class="flex two-label-input-container">
+          <div class="flex column one-label-input-container">
+            <label for="zip-code">Zip code</label>
+            <input id="zip-code" type="text" />
+            <p class="error none">The field Zip code has an error</p>
+          </div>
+          <div class="flex column one-label-input-container">
+            <label for="city">City</label>
+            <input id="city" type="text" />
+            <p class="error none">The field City has an error</p>
+          </div>
+        </div>
+        <div class="flex two-label-input-container">
+          <div class="flex column one-label-input-container">
+            <label for="email">Email</label>
+            <input id="email" type="email" />
+            <p class="error none">The field Email has an error</p>
+          </div>
+          <div class="flex column one-label-input-container">
+            <label for="password">Password</label>
+            <input id="password" type="password" />
+            <p class="error none">The field Password has an error</p>
+          </div>
+        </div>
+        <div class="flex two-label-input-container">
+          <div class="flex column one-label-input-container">
+            <label for="confirm-password">Confirm Password</label>
+            <input id="confirm-password" type="password" />
+            <p class="error none">Passwords didn't match</p>
+          </div>
+        </div>
+        <input class="button bold" type="submit" value="continue" />
+        <a id="login-button" class="bold" href="./login.html">login</a>
+      </form>
+    </main>
+  </body>
+</html>
