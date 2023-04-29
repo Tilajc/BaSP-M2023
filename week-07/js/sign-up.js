@@ -228,6 +228,17 @@ window.onload = function(){
             return array;
         }
 
+    function changeDateFormat(date){
+        var dateArray = date.split('-');
+
+        year=dateArray[0];
+        month=dateArray[1];
+        day=dateArray[2];
+
+        dateArray= month + '/' + day + '/' + year;
+        return dateArray;
+    }
+
     var errorMessage = document.getElementsByClassName('error');
 
     var inputName = document.getElementById('name');
@@ -388,38 +399,108 @@ window.onload = function(){
         errorMessage[10].classList.add('none');
     });
 
+    var locStorageName = localStorage.getItem('name');
+    var locStorageLastName = localStorage.getItem('last-name');
+    var locStorageID = localStorage.getItem('id');
+    var locStorageBirthDate = localStorage.getItem('birth-date');
+    var locStoragePhone = localStorage.getItem('phone-number');
+    var locStorageAddress = localStorage.getItem('address');
+    var locStorageZip = localStorage.getItem('zip');
+    var locStorageCity = localStorage.getItem('city')
+    var locStorageEmail = localStorage.getItem('email');
+    var locStoragePassword = localStorage.getItem('password');
+    var locStorageCPassword = localStorage.getItem('confirm-password');
+
+    if (locStorageName != ''){
+        inputName.value=locStorageName;
+    }
+    if (locStorageLastName != ''){
+        inputLastName.value=locStorageLastName;
+    }
+    if (locStorageID != ''){
+        inputID.value=locStorageID;
+    }
+    if (locStorageBirthDate != ''){
+        inputBirthDate.value=locStorageBirthDate;
+    }
+    if (locStoragePhone != ''){
+        inputPhoneNumber.value=locStoragePhone;
+    }
+    if (locStorageAddress != ''){
+        inputAddress.value=locStorageAddress;
+    }
+    if (locStorageZip != ''){
+        inputZip.value=locStorageZip;
+    }
+    if (locStorageCity != ''){
+        inputCity.value=locStorageCity;
+    }
+    if (locStorageEmail != ''){
+        inputEmail.value=locStorageEmail;
+    }
+    if (locStoragePassword != ''){
+        inputPassword.value=locStoragePassword;
+    }
+    if (locStorageCPassword != ''){
+        inputCPassword.value=locStorageCPassword;
+    }
+
+
     var submitButton=document.querySelector('input[type="submit"]');
 
     submitButton.addEventListener('click', function(event){
         event.preventDefault();
+
         if (validateAll(inputName.value, inputLastName.value, inputID.value,
             inputBirthDate.value, inputPhoneNumber.value, inputAddress.value,
             inputZip.value, inputCity.value, inputEmail.value,
             inputPassword.value, inputCPassword.value)){
-            url =`https://api-rest-server.vercel.app/signup?name=${inputName.value}&lastName=${inputLastName.value}
-            &id=${inputID.value}&birthDate=${inputBirthDate.value}&phoneNumber=${inputPhoneNumber.value}
-            &address=${inputAddress.value}&zipCode=${inputZip.value}&city=${inputCity.value}&email=${inputEmail.value}
-            &password=${inputPassword.value}&confirmPassword=${inputCPassword.value}`;
+
+            url ='https://api-rest-server.vercel.app/signup?'+
+            'name=' +inputName.value+
+            '&lastName='+inputLastName.value+
+            '&dni='+inputID.value+
+            '&dob='+changeDateFormat(inputBirthDate.value)+
+            '&phone='+inputPhoneNumber.value+
+            '&address='+inputAddress.value+
+            '&zip='+inputZip.value+
+            '&city='+inputCity.value+
+            '&email='+inputEmail.value+
+            '&password='+inputPassword.value+
+            '&confirmPassword='+inputCPassword.value;
 
             fetch(url)
             .then(function(response){
-                if(response.ok){
-                    console.log(response);
-                    alert('Name: ' + inputName.value +
-                    '\nLast name: ' + inputLastName.value +
-                    '\nID: ' + inputID.value +
-                    '\nBirth date: ' + inputBirthDate.value +
-                    '\nPhone number: ' + inputPhoneNumber.value +
-                    '\nAddress: ' + inputAddress.value +
-                    '\nZip code: ' + inputZip.value +
-                    '\nCity: ' + inputCity.value +
-                    '\nEmail: ' + inputEmail.value +
-                    '\nPassword: ' + inputPassword.value +
-                    '\nConfirm password: ' + inputCPassword.value
-                )}
+                return response.json();
             })
-            .catch(function(){
-
+            .then(function(response){
+                if(!response.success){throw new Error(response)}
+                alert(JSON.stringify(response));
+                alert('Name: ' + inputName.value +
+                '\nLast name: ' + inputLastName.value +
+                '\nID: ' + inputID.value +
+                '\nBirth date: ' + inputBirthDate.value +
+                '\nPhone number: ' + inputPhoneNumber.value +
+                '\nAddress: ' + inputAddress.value +
+                '\nZip code: ' + inputZip.value +
+                '\nCity: ' + inputCity.value +
+                '\nEmail: ' + inputEmail.value +
+                '\nPassword: ' + inputPassword.value +
+                '\nConfirm password: ' + inputCPassword.value);
+                localStorage.setItem('name', inputName.value);
+                localStorage.setItem('last-name', inputLastName.value);
+                localStorage.setItem('id', inputID.value);
+                localStorage.setItem('birth-date', inputBirthDate.value);
+                localStorage.setItem('phone-number', inputPhoneNumber.value);
+                localStorage.setItem('address', inputAddress.value);
+                localStorage.setItem('zip', inputZip.value);
+                localStorage.setItem('city', inputCity.value);
+                localStorage.setItem('email', inputEmail.value);
+                localStorage.setItem('password', inputPassword.value);
+                localStorage.setItem('confirm-password', inputCPassword.value);
+            })
+            .catch(function(error){
+                alert(JSON.stringify(error));
             });
         } else{
             alert(validateAllInformation(inputName.value, inputLastName.value, inputID.value,
@@ -428,8 +509,4 @@ window.onload = function(){
             inputPassword.value, inputCPassword.value));
         }
     });
-
-
-    /* localStorage.setItem('email', emailInput.value);
-    localStorage.setItem('password', passwordInput.value); */
 }

@@ -109,11 +109,11 @@ window.onload = function(){
         if ((validateEmail(emailInput.value)) && (validatePassword(passwordInput.value))){
             fetch(url)
             .then(function(response){
-                if(!response.ok){throw new Error()}
                 return response.json();
             })
             .then(function(response){
-                alert(response);
+                if(!response.success){throw new Error(JSON.stringify(response))}
+                alert(JSON.stringify(response));
                 alert('Email: ' + emailInput.value + '\nPassword: ' + passwordInput.value);
             })
             .catch(function(error){
