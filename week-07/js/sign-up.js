@@ -43,13 +43,15 @@ window.onload = function(){
             var upLetter=false;
             var number=false;
             for(var i=0; i<password.length; i++){
-                if(isLowLetter(password[i])){
-                    lowLetter=true;
-                }else if(isUpLetter(password[i])){
-                    upLetter=true;
-                }else if(isNumber(password[i])){
-                    number=true;
-                }else{return false;}
+                switch(true){
+                    case isLowLetter(password[i]): lowLetter=true;
+                    break;
+                    case isUpLetter(password[i]): upLetter=true;
+                    break;
+                    case isNumber(password[i]): number=true;
+                    break;
+                    default: return false;
+                }
             }
             if(!(lowLetter==false || upLetter==false || number==false)){
                 return true;
@@ -109,14 +111,14 @@ window.onload = function(){
                         return false;
                     }
                 }
-                if((isUpLetter(a[cont]) || (isLowLetter(a[cont])))){
-                    letterVerifier=true;
-                } else if(isNumber(a[cont])){
-                    numberVerifier=true;
-                } else if(a[cont]==' '){
-                    spaceVerifier=true;
-                } else {
-                    verifier=false;
+                switch(true){
+                    case (isUpLetter(a[cont]) || isLowLetter(a[cont])): letterVerifier=true;
+                    break;
+                    case isNumber(a[cont]):numberVerifier=true;
+                    break;
+                    case (a[cont]==' '):spaceVerifier=true;
+                    break;
+                    default: verifier=false;
                 }
                 cont++;
             }
@@ -222,7 +224,7 @@ window.onload = function(){
             if(!validatePassword(password)){
                 array.push('\nInvalid Password "' + password + '"');
             }
-            if(!confirmPassword(cPassword)){
+            if(!confirmPassword(password, cPassword)){
                 array.push('\nInvalid Confirm Password "' + cPassword + '"');
             }
             return array;
@@ -231,9 +233,9 @@ window.onload = function(){
     function changeDateFormat(date){
         var dateArray = date.split('-');
 
-        year=dateArray[0];
-        month=dateArray[1];
-        day=dateArray[2];
+        var year=dateArray[0];
+        var month=dateArray[1];
+        var day=dateArray[2];
 
         dateArray= month + '/' + day + '/' + year;
         return dateArray;
@@ -411,40 +413,25 @@ window.onload = function(){
     var locStoragePassword = localStorage.getItem('password');
     var locStorageCPassword = localStorage.getItem('confirm-password');
 
-    if (locStorageName != ''){
-        inputName.value=locStorageName;
-    }
-    if (locStorageLastName != ''){
-        inputLastName.value=locStorageLastName;
-    }
-    if (locStorageID != ''){
-        inputID.value=locStorageID;
-    }
-    if (locStorageBirthDate != ''){
-        inputBirthDate.value=locStorageBirthDate;
-    }
-    if (locStoragePhone != ''){
-        inputPhoneNumber.value=locStoragePhone;
-    }
-    if (locStorageAddress != ''){
-        inputAddress.value=locStorageAddress;
-    }
-    if (locStorageZip != ''){
-        inputZip.value=locStorageZip;
-    }
-    if (locStorageCity != ''){
-        inputCity.value=locStorageCity;
-    }
-    if (locStorageEmail != ''){
-        inputEmail.value=locStorageEmail;
-    }
-    if (locStoragePassword != ''){
-        inputPassword.value=locStoragePassword;
-    }
-    if (locStorageCPassword != ''){
-        inputCPassword.value=locStorageCPassword;
-    }
+    inputName.value=locStorageName;
+    inputLastName.value=locStorageLastName;
+    inputID.value=locStorageID;
+    inputBirthDate.value=locStorageBirthDate;
+    inputPhoneNumber.value=locStoragePhone;
+    inputAddress.value=locStorageAddress;
+    inputZip.value=locStorageZip;
+    inputCity.value=locStorageCity;
+    inputEmail.value=locStorageEmail;
+    inputPassword.value=locStoragePassword;
+    inputCPassword.value=locStorageCPassword;
 
+    var modal=document.querySelector('.modal')
+    var modalClose=document.querySelector('.modal-close');
+    var modalP=document.querySelector('.modal-msg');
+
+    modalClose.addEventListener('click', function(){
+        modal.classList.add('none');
+    })
 
     var submitButton=document.querySelector('input[type="submit"]');
 
@@ -474,19 +461,21 @@ window.onload = function(){
                 return response.json();
             })
             .then(function(response){
-                if(!response.success){throw new Error(response)}
+                if(!response.success){throw new Error(JSON.stringify(response))}
                 alert(JSON.stringify(response));
-                alert('Name: ' + inputName.value +
-                '\nLast name: ' + inputLastName.value +
-                '\nID: ' + inputID.value +
-                '\nBirth date: ' + inputBirthDate.value +
-                '\nPhone number: ' + inputPhoneNumber.value +
-                '\nAddress: ' + inputAddress.value +
-                '\nZip code: ' + inputZip.value +
-                '\nCity: ' + inputCity.value +
-                '\nEmail: ' + inputEmail.value +
-                '\nPassword: ' + inputPassword.value +
-                '\nConfirm password: ' + inputCPassword.value);
+                modal.classList.remove('none');
+                modal.classList.add('flex');
+                modalP.innerHTML='Name: ' + inputName.value +
+                'Last name: ' + inputLastName.value +
+                'ID: ' + inputID.value +
+                'Birth date: ' + inputBirthDate.value +
+                'Phone number: ' + inputPhoneNumber.value +
+                'Address: ' + inputAddress.value +
+                'Zip code: ' + inputZip.value +
+                'City: ' + inputCity.value +
+                'Email: ' + inputEmail.value +
+                'Password: ' + inputPassword.value +
+                'Confirm password: ' + inputCPassword.value;
                 localStorage.setItem('name', inputName.value);
                 localStorage.setItem('last-name', inputLastName.value);
                 localStorage.setItem('id', inputID.value);
@@ -500,13 +489,17 @@ window.onload = function(){
                 localStorage.setItem('confirm-password', inputCPassword.value);
             })
             .catch(function(error){
-                alert(JSON.stringify(error));
+                modal.classList.remove('none');
+                modal.classList.add('flex');
+                modalP.innerHTML=error;
             });
         } else{
-            alert(validateAllInformation(inputName.value, inputLastName.value, inputID.value,
+            modal.classList.remove('none');
+            modal.classList.add('flex');
+            modalP.innerHTML=validateAllInformation(inputName.value, inputLastName.value, inputID.value,
             inputBirthDate.value, inputPhoneNumber.value, inputAddress.value,
             inputZip.value, inputCity.value, inputEmail.value,
-            inputPassword.value, inputCPassword.value));
+            inputPassword.value, inputCPassword.value);
         }
     });
 }

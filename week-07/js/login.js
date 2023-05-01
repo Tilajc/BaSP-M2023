@@ -56,13 +56,15 @@ window.onload = function(){
             var upLetter=false;
             var number=false;
             for(var i=0; i<password.length; i++){
-                if(isLowLetter(password[i])){
-                    lowLetter=true;
-                }else if(isUpLetter(password[i])){
-                    upLetter=true;
-                }else if(isNumber(password[i])){
-                    number=true;
-                }else{return false;}
+                switch(true){
+                    case isLowLetter(password[i]): lowLetter=true;
+                    break;
+                    case isUpLetter(password[i]): upLetter=true;
+                    break;
+                    case isNumber(password[i]): number=true;
+                    break;
+                    default: return false;
+                }
             }
             if(!(lowLetter==false || upLetter==false || number==false)){
                 return true;
@@ -98,6 +100,14 @@ window.onload = function(){
         errorP[2].classList.add('none');
     });
 
+    var modal=document.querySelector('.modal')
+    var modalClose=document.querySelector('.modal-close');
+    var modalP=document.querySelector('.modal-msg');
+
+    modalClose.addEventListener('click', function(){
+        modal.classList.add('none');
+    })
+
     var submitButton=document.querySelector('input[type="submit"]');
 
     submitButton.addEventListener('click', function(event){
@@ -113,14 +123,19 @@ window.onload = function(){
             })
             .then(function(response){
                 if(!response.success){throw new Error(JSON.stringify(response))}
-                alert(JSON.stringify(response));
-                alert('Email: ' + emailInput.value + '\nPassword: ' + passwordInput.value);
+                modal.classList.remove('none');
+                modal.classList.add('flex');
+                modalP.innerHTML=JSON.stringify(response) + 'Email: ' + emailInput.value + 'Password: ' + passwordInput.value;
             })
             .catch(function(error){
-                alert(error);
+                modal.classList.remove('none');
+                modal.classList.add('flex');
+                modalP.innerHTML=error;
             })
         } else{
-            alert(validateAllInformation(emailInput.value, passwordInput.value));
+            modal.classList.remove('none');
+            modal.classList.add('flex');
+            modalP.innerHTML=validateAllInformation(emailInput.value, passwordInput.value);
         }
     });
 }
