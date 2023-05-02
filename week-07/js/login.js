@@ -101,11 +101,16 @@ window.onload = function(){
     });
 
     var modal=document.querySelector('.modal')
+    var modalContainer=document.querySelector('.modal-container');
     var modalClose=document.querySelector('.modal-close');
     var modalP=document.querySelector('.modal-msg');
 
     modalClose.addEventListener('click', function(){
         modal.classList.add('none');
+        modalContainer.classList.remove('modal-container-red');
+        modalClose.classList.remove('modal-close-red');
+        modalContainer.classList.remove('modal-container-green');
+        modalClose.classList.remove('modal-close-green');
     })
 
     var submitButton=document.querySelector('input[type="submit"]');
@@ -125,16 +130,22 @@ window.onload = function(){
                 if(!response.success){throw new Error(JSON.stringify(response))}
                 modal.classList.remove('none');
                 modal.classList.add('flex');
-                modalP.innerHTML=JSON.stringify(response) + 'Email: ' + emailInput.value + 'Password: ' + passwordInput.value;
+                modalContainer.classList.add('modal-container-green');
+                modalClose.classList.add('modal-close-green');
+                modalP.innerHTML=JSON.stringify(response) + '\nEmail: ' + emailInput.value + '\nPassword: ' + passwordInput.value;
             })
             .catch(function(error){
                 modal.classList.remove('none');
                 modal.classList.add('flex');
+                modalContainer.classList.add('modal-container-red');
+                modalClose.classList.add('modal-close-red');
                 modalP.innerHTML=error;
             })
         } else{
             modal.classList.remove('none');
             modal.classList.add('flex');
+            modalContainer.classList.add('modal-container-red');
+            modalClose.classList.add('modal-close-red');
             modalP.innerHTML=validateAllInformation(emailInput.value, passwordInput.value);
         }
     });

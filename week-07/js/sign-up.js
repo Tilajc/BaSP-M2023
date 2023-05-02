@@ -401,36 +401,29 @@ window.onload = function(){
         errorMessage[10].classList.add('none');
     });
 
-    var locStorageName = localStorage.getItem('name');
-    var locStorageLastName = localStorage.getItem('last-name');
-    var locStorageID = localStorage.getItem('id');
-    var locStorageBirthDate = localStorage.getItem('birth-date');
-    var locStoragePhone = localStorage.getItem('phone-number');
-    var locStorageAddress = localStorage.getItem('address');
-    var locStorageZip = localStorage.getItem('zip');
-    var locStorageCity = localStorage.getItem('city')
-    var locStorageEmail = localStorage.getItem('email');
-    var locStoragePassword = localStorage.getItem('password');
-    var locStorageCPassword = localStorage.getItem('confirm-password');
+    inputName.value=localStorage.getItem('name');
+    inputLastName.value=localStorage.getItem('last-name');
+    inputID.value=localStorage.getItem('id');
+    inputBirthDate.value=localStorage.getItem('birth-date');
+    inputPhoneNumber.value=localStorage.getItem('phone-number');
+    inputAddress.value=localStorage.getItem('address');
+    inputZip.value=localStorage.getItem('zip');
+    inputCity.value=localStorage.getItem('city');
+    inputEmail.value=localStorage.getItem('email');
+    inputPassword.value=localStorage.getItem('password');
+    inputCPassword.value=localStorage.getItem('confirm-password');
 
-    inputName.value=locStorageName;
-    inputLastName.value=locStorageLastName;
-    inputID.value=locStorageID;
-    inputBirthDate.value=locStorageBirthDate;
-    inputPhoneNumber.value=locStoragePhone;
-    inputAddress.value=locStorageAddress;
-    inputZip.value=locStorageZip;
-    inputCity.value=locStorageCity;
-    inputEmail.value=locStorageEmail;
-    inputPassword.value=locStoragePassword;
-    inputCPassword.value=locStorageCPassword;
-
+    var modalContainer=document.querySelector('.modal-container');
     var modal=document.querySelector('.modal')
     var modalClose=document.querySelector('.modal-close');
     var modalP=document.querySelector('.modal-msg');
 
     modalClose.addEventListener('click', function(){
         modal.classList.add('none');
+        modalContainer.classList.remove('modal-container-red');
+        modalClose.classList.remove('modal-close-red');
+        modalContainer.classList.remove('modal-container-green');
+        modalClose.classList.remove('modal-close-green');
     })
 
     var submitButton=document.querySelector('input[type="submit"]');
@@ -462,20 +455,23 @@ window.onload = function(){
             })
             .then(function(response){
                 if(!response.success){throw new Error(JSON.stringify(response))}
-                alert(JSON.stringify(response));
                 modal.classList.remove('none');
                 modal.classList.add('flex');
-                modalP.innerHTML='Name: ' + inputName.value +
-                'Last name: ' + inputLastName.value +
-                'ID: ' + inputID.value +
-                'Birth date: ' + inputBirthDate.value +
-                'Phone number: ' + inputPhoneNumber.value +
-                'Address: ' + inputAddress.value +
-                'Zip code: ' + inputZip.value +
-                'City: ' + inputCity.value +
-                'Email: ' + inputEmail.value +
-                'Password: ' + inputPassword.value +
-                'Confirm password: ' + inputCPassword.value;
+                modalContainer.classList.add('modal-container-green');
+                modalClose.classList.add('modal-close-green');
+                modalP.innerHTML=
+                response.msg +
+                '\nName: ' + inputName.value +
+                '\nLast name: ' + inputLastName.value +
+                '\nID: ' + inputID.value +
+                '\nBirth date: ' + inputBirthDate.value +
+                '\nPhone number: ' + inputPhoneNumber.value +
+                '\nAddress: ' + inputAddress.value +
+                '\nZip code: ' + inputZip.value +
+                '\nCity: ' + inputCity.value +
+                '\nEmail: ' + inputEmail.value +
+                '\nPassword: ' + inputPassword.value +
+                '\nConfirm password: ' + inputCPassword.value;
                 localStorage.setItem('name', inputName.value);
                 localStorage.setItem('last-name', inputLastName.value);
                 localStorage.setItem('id', inputID.value);
@@ -491,11 +487,15 @@ window.onload = function(){
             .catch(function(error){
                 modal.classList.remove('none');
                 modal.classList.add('flex');
+                modalContainer.classList.add('modal-container-red');
+                modalClose.classList.add('modal-close-red');
                 modalP.innerHTML=error;
             });
         } else{
             modal.classList.remove('none');
             modal.classList.add('flex');
+            modalContainer.classList.add('modal-container-red');
+            modalClose.classList.add('modal-close-red');
             modalP.innerHTML=validateAllInformation(inputName.value, inputLastName.value, inputID.value,
             inputBirthDate.value, inputPhoneNumber.value, inputAddress.value,
             inputZip.value, inputCity.value, inputEmail.value,

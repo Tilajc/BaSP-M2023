@@ -169,22 +169,17 @@ input[type="submit"]{
 
 .modal-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 40px;
     width: 70%;
     max-width: 550px;
     padding: 10px 0 10px 20px;
     border-radius: 4px;
     color: #fff;
-    background-color: #f13312;
 }
 
 .modal-container p{
     font-size: 14px;
-}
-
-.close-container{
-    justify-content: flex-end;
 }
 
 .modal-close{
@@ -192,15 +187,48 @@ input[type="submit"]{
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #fff;
-    background-color: #f13312;
-    border-color: #f13312;
-    border-style: solid;
-    border-width: 3px;
+    border: none;
     border-radius: 50%;
+    color: #fff;
 }
 
 .modal-close:hover{
-    color: #f13312;
     background-color: #fff;
+}
+
+.modal-container-red{
+    background-color: #f13312;
+}
+
+.modal-close-red{
+    background-color: #f13312;
+}
+
+.modal-close-red:hover{
+    color: #f13312;
+}
+
+.modal-container-green{
+    background-color: #80c526;
+}
+
+.modal-close-green{
+    background-color: #80c526;
+}
+
+.modal-close-green:hover{
+    color: #80c526;
+}
+
+.modal-msg{
+    white-space: pre-line;
+}
+
+.msg-container{
+    width: 90%;
+}
+
+.close-container{
+    width: 10%;
+    min-width: 34px;
 }
